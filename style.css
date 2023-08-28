@@ -46,6 +46,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+img{
+    max-width: 100%;
+    height: auto;
+}
 /*------------------------以上為CSS reset-------------------------*/
 h1{
     font-size: 32px;
@@ -59,54 +64,79 @@ p{
     line-height: 1.5;
 }
 
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/*------------------------以下為header css-------------------------*/
+.header{
+    display: flex;
+}
+
+.logo{
+    width: 15%;
+    margin-left: 5%;
+}
+
+.menu{
+    width: 75%;
+}
+
+.menu{
+    display: flex;
+    justify-content: end;
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+}
+
+.menu li{
+    text-align: center;
+    line-height: 44px;
+    height: 44px;
+}
+
+.menu li a{
+    display: block;
+    text-decoration: none;
+    color: #3E3A39;
+    font-weight: 500;
+    margin-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menu li a:hover{
+    color: #E5C45D;
+    font-weight: bold;
+}
+
 
 /*------------------------以上為常用CSS-------------------------*/
 
-.logo{
-    margin-left: 5%;
-    display: inline-block;
-    width: 20%;
+.part{
+    padding: 20px 20px;
 }
-
-.container{
-    margin: auto;
-    width: 80%;
-}
-
-.nav{
-    display: inline-block;
-    width: 70%;
-    background-color: antiquewhite;
-    align-content: end;
-}
-
-.nav ul{
-    align-items: end;
-}
-
-.nav ul li{
-    display: inline-block;
-    margin-left: 25px;
-}
-
-.banner{
-    height: 600px;
-}
-
 
 .part1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 25px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 .part1_left{
-    display: inline-block;
     width: 50%;
 }
 
 .part1_right{
-    display: inline-block;
-    width: 45%;
+    width: 50%;
+    text-align: center;
 }
 
 .part1 h1{
@@ -119,25 +149,31 @@ p{
     align-items: center;
     width: 100px;
     height: 30px;
-    background-color: bisque;
+    color: #fff;
+    background-color: #E5C45D;
+    border-radius: 5px;
     margin-top: 15px;
     line-height: 2;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-/*---------------------------------*/
+/*--------------以上為part1-------------------*/
 .part2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 25px;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 .part2_left{
-    display: inline-block;
     width: 50%;
+    text-align: center;
 }
 
 .part2_right{
-    display: inline-block;
-    width: 45%;
+    width: 50%;
 }
 
 .part2_right h1{
@@ -157,6 +193,7 @@ p{
 .part3{
     margin-top: 25px;
     margin-bottom: 50px;
+    padding: 20px;
 }
 
 /*
@@ -191,7 +228,110 @@ p{
     margin-bottom: 5px;
 }
 
+.part3_text{
+    margin-bottom: 25px;
+}
+
+.part3 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.part3 ul li{
+    width: 32%;
+}
+
+/*---------------footer area------------------*/
+
 footer{
-    border-top: 2px solid gray;
-    height: 350px;
+    background-color: rgb(255, 248, 236);
+    height: 400px;
+}
+
+.footer-area{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-top{
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo{
+    width: 35%;
+    text-align: center;
+}
+
+.footer-area ul{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+.footer-area li{
+    width: 25%;
+}
+
+.footer-area h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-links a{
+    padding: 5px 0px;
+    display: block;
+    text-decoration: none;
+    color: #3E3A39;
+}
+
+.footer-social{
+    text-align: center;
+}
+
+.footer-social img{
+    width: 50px;
+}
+
+.footer-social a{
+    display: inline-block;
+    width: 60px;
+}
+
+.footer-top a:hover{
+    color: #E5C45D;
+    font-weight: bold;
+}
+
+.footer-social p{
+    margin-top: 5px;
+}
+
+footer .line{
+    background-color: #fff;
+    height: 1px;
+    width: 70%;
+    margin: 20px auto;
+}
+
+/*---------------go top------------------*/
+#gotop{
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+}
+
+#gotop a{
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-color: #E5C45D;
+    border-radius: 50%;
+    background-image: url(img/icon/未命名-2.png);
+    background-size: cover;
 }
