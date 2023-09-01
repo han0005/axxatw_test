@@ -241,9 +241,20 @@ p{
 @media(max-width:745px) {
     .part1{
         flex-direction: column;
+        position: relative;
     }
     .part1_left{
         width: 85%;
+    }
+
+    .part1_right{
+        width: 85%;
+    }
+
+    .part1_right{
+        position: absolute;
+        top: 150px;
+        z-index: -1;
     }
 }
 
@@ -280,8 +291,14 @@ p{
 @media(max-width:745px) {
     .part2{
         flex-direction: column-reverse;
+        margin-bottom: -20px;
+        margin-top: 200px;
+        background-color: white;
     }
     .part2_right{
+        width: 85%;
+    }
+    .part2_left{
         width: 85%;
     }
 }
