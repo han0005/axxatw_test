@@ -51,7 +51,25 @@ img{
     max-width: 100%;
     height: auto;
 }
+
 /*------------------------以上為CSS reset-------------------------*/
+@font-face {
+    font-family: 'bornready';
+    src: url('https://static1.squarespace.com/static/63071dfeb81deb5ffdb0a2b2/t/630c35b673c9a669db32b26b/1661744570391/Born-ready-slanted.ttf')
+}
+
+@font-face {
+    font-family: 'lexend';
+    src: url('https://static1.squarespace.com/static/63071dfeb81deb5ffdb0a2b2/t/630c35c780fdd80dc7d5c9e6/1661744583372/Lexend-Regular.ttf')
+}
+
+.f-born{
+    font-family: 'bornready';
+    font-weight: 100;
+}
+/*------------------------以上為字體-------------------------*/
+
+
 h1{
     font-size: 32px;
     line-height: 1.2;
@@ -69,6 +87,45 @@ p{
     margin: 0 auto;
 }
 
+/*--------------------以下為aside------------------------*/
+.aside{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    background-color: #E5C45D;
+    transform: translateX(-100%);
+    transition-duration: .3s;
+}
+
+.aside.aside-active{
+    transform: translateX(0%);
+}
+
+.aside-btn{
+    display: none;
+    background-image: url(img/burger.png);
+}
+
+.aside ul{
+    margin-top: 95px;
+}
+
+.aside a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 25px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.aside a:hover{
+    background-color: white;
+    color: #E5C45D;
+}
 
 /*------------------------以下為header css-------------------------*/
 .header{
@@ -115,6 +172,30 @@ p{
     font-weight: bold;
 }
 
+@media(max-width:745px) {
+    .header .menu{
+        display: none;
+    }
+
+    .logo{
+        width: 33%;
+    }
+
+    .aside-btn{
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        text-align: center;
+        margin-right: 5%;
+        z-index: 2;
+        background-color: #fff;
+    }
+    .header{
+        justify-content: space-between;
+        align-items: center;
+    }
+}
 
 /*------------------------以上為常用CSS-------------------------*/
 
@@ -157,6 +238,15 @@ p{
     font-weight: 600;
 }
 
+@media(max-width:745px) {
+    .part1{
+        flex-direction: column;
+    }
+    .part1_left{
+        width: 85%;
+    }
+}
+
 /*--------------以上為part1-------------------*/
 .part2{
     display: flex;
@@ -185,6 +275,15 @@ p{
     font-weight: bold;
     letter-spacing: 1.5px;
     margin-bottom: 5px;
+}
+
+@media(max-width:745px) {
+    .part2{
+        flex-direction: column-reverse;
+    }
+    .part2_right{
+        width: 85%;
+    }
 }
 
 /*---------------------------------*/
@@ -237,6 +336,16 @@ p{
 
 .part3 ul li{
     width: 32%;
+}
+
+@media(max-width:745px) {
+    .part3 ul{
+        flex-wrap: wrap;
+    }
+
+    .part3 ul li{
+        width: 100%;
+    }
 }
 
 /*---------------footer area------------------*/
@@ -316,6 +425,71 @@ footer .line{
     width: 70%;
     margin: 20px auto;
 }
+
+
+@media(max-width:745px) {
+    footer{
+        height: 100%;
+    }
+
+    .footer-area{
+        flex-direction: column;
+    }
+
+    .footer-logo{
+        width: 75%;
+    }
+
+    .footer-down{
+        flex-direction: column;
+    }
+
+    .footer-area ul{
+        width: 95%;
+    }
+
+    .footer-area ul li{
+        width: 100%;
+    }
+
+    .footer-down>li{
+        border-bottom: 1px solid #000;
+        padding-bottom: 10px;
+    }
+
+    .footer-area h2{
+        margin-top: 10px;
+    }
+
+    
+    .footer-social a{
+        width: 45px;
+    }
+
+    .footer-social img{
+        width: 40px;
+    }
+
+    .footer-links{
+        display: none;
+    }
+
+    .footer-links.open{
+        display: block;
+        transition: 1s;
+    }
+
+    .footer-down h2{
+        color: #3E3A39;
+    }
+
+    .footer-down h2.hv{
+        color: #E5C45D;
+    }
+}
+
+
+
 
 /*---------------go top------------------*/
 #gotop{
