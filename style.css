@@ -154,6 +154,14 @@ p{
     color: #E5C45D;
 }
 
+.menu li .xoffice{
+    background-color: #E5C45D;
+    color: white;
+    border-radius: 30px;
+    line-height: 26px;
+    margin-top: 10px;
+}
+
 @media(max-width:745px) {
     .aside{
         display: block;
