@@ -52,6 +52,10 @@ img{
     height: auto;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 /*------------------------以上為CSS reset-------------------------*/
 @font-face {
     font-family: 'bornready';
@@ -587,5 +591,179 @@ footer .line{
 
     .index-sw{
         margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+
+/*----------------------------------about page------------------------------------------*/
+.about.banner{
+    position: relative;
+}
+
+.about.banner .banner-text{
+    background-color: white;
+    width: 45%;
+    padding: 30px 45px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.about.banner .banner-text .f-born{
+    font-size: 22px;
+}
+
+.about-text1{
+    margin: 25px 0 25px 0;
+    padding: 50px 75px;
+    background-color: rgba(207, 207, 207, 0.329);
+}
+
+.about-text1 h1{
+    font-size: 32px;
+    text-align: center;
+    margin: 20px;
+}
+
+@media(max-width:745px) {
+    .about.banner .banner-text{
+        position: relative;
+        width: 100%;
+        transform: none;
+        padding: 20px;
+    }
+
+    .about-text1{
+        padding: 20px;
+
+    }
+    .about-text1 h1{
+        font-size: 23px;
+        margin: 10px 0;
+        letter-spacing: 0;
+    }
+
+    .about.banner .banner-text h1{
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+}
+
+
+/*----------------------------------------*/
+.about-part1{
+    display: flex;
+    margin-top: 85px;
+}
+
+.about-part1 .part-l, .about-part2 .part-l{
+    width: 60%;
+}
+
+.about-part1 .part-r, .about-part2 .part-r{
+    width: 40%;
+    padding-top: 25px;
+}
+
+.about-part1 .part-l,.about-part2 .part-l{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-part1 .part-l img,.about-part2 .part-l p{
+    width: 60%;
+}
+
+.about-part1 .part-r p{
+    margin-bottom: 25px;
+}
+@media(max-width:745px) {
+    .about-part1{
+        flex-direction: column;
+        padding: 20px;
+        margin-top: -26px;
+    }
+    .about-part1 .part-l, .about-part2 .part-l{
+        width: 100%;
+    }
+    .about-part1 .part-r, .about-part2 .part-r{
+        width: 100%;
+    }
+    .about-part1 .part-l img, .about-part2 .part-l p{
+        width: 100%;   
+    }
+}
+
+/*----------------------------------------*/
+.about-part2{
+    margin-top: 120px;
+    display: flex;
+    margin-bottom: 85px;
+}
+
+.about-part2 .part-l img{
+    width: 60%;
+    margin-top: 40px;
+}
+
+.about-part2 .part-l{
+    flex-direction: column;
+}
+
+.about-part2 .part-r img{
+    width: 70%;
+    margin: auto;
+}
+
+.about-part2 .part-r{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.part-r .f-born{
+    margin-top: 60px;
+    font-size: 38px;
+    color: #E5C45D;
+}
+
+@media(max-width:745px) {
+    .about-part2{
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 0px;
+        position: relative;
+    }
+    .about-part2 .part-l{
+        flex-direction: column-reverse;
+    }
+
+    .about-part2 .part-l img{
+        width: 60%;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    .about-part2 .part-l{
+        align-items: flex-start;
+    }
+
+    .about-part2 .part-r img{
+        width: 40%;
+        position: absolute;
+        top: 18%;
+        right: 5%;
+    }
+
+    .about-part2 .part-l p{
+        margin-top: 30px;
     }
 }
