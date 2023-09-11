@@ -1,8 +1,9 @@
 $(document).ready(function () {
     $('.footer-down li').click(function (e) { 
         e.preventDefault();
-        $(this).find('.footer-links').toggleClass('open');
+        $(this).find('.footer-links').toggleClass('open').parent().siblings().find('.footer-links').removeClass('open');
     });
+
 
     $('.footer-down li').click(function (e) { 
         e.preventDefault();
@@ -16,27 +17,5 @@ $(document).ready(function () {
 });
 
 
-
-const swiper = new Swiper('.swiper', {
-// Optional parameters
-direction: 'vertical',
-loop: true,
-
-// If we need pagination
-pagination: {
-el: '.swiper-pagination',
-},
-
-// Navigation arrows
-navigation: {
-nextEl: '.swiper-button-next',
-prevEl: '.swiper-button-prev',
-},
-
-// And if we need scrollbar
-scrollbar: {
-el: '.swiper-scrollbar',
-},
-}); 
 
 
