@@ -70,7 +70,7 @@ img{
 .f-born{
     font-family: 'bornready';
     font-weight: 100;
-    color: rgb(216, 216, 216);
+    color: #E5C45D;
 }
 /*------------------------以上為字體-------------------------*/
 
@@ -80,6 +80,7 @@ h1{
     line-height: 1.2;
     font-weight: bold;
     letter-spacing: 1px;
+    color: #3E3A39;
 }
 
 p{
@@ -124,6 +125,7 @@ p{
     transform: translateX(-100%);
     transition-duration: .3s;
     display: none;
+    overscroll-behavior: contain;x
 }
 
 .aside.aside-active{
@@ -162,9 +164,43 @@ p{
     margin-top: 10px;
 }
 
+.aside-open{
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+.aside .about-a .down-menu{
+    display: none;
+}
+.aside .about-a .down-menu li{
+    background-color: #d9ab1b;
+}
+
+
+.aside .pd-a .pd-menu{
+    display: none;
+}
+
+
+
 @media(max-width:745px) {
     .aside{
         display: block;
+    }
+    .aside ul{
+        margin-top: 0;
+    }
+
+    .pd-menu{
+   
+    }
+    .pd-menu li{
+        display: inline-block;
+        width: 100px;
+    }
+    .pd-menu img{
+        max-width: 56%;
     }
 }
 
@@ -212,6 +248,48 @@ p{
     color: #E5C45D;
     font-weight: bold;
 }
+
+.menu .down-menu{
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    width: 150px;
+    display: none;
+    z-index: 999;
+}
+
+.menu .pd-menu{
+    position: absolute;
+    left: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: #E5C45D;
+    padding: 0px 50px;
+    display: none;
+}
+.menu .pd-menu li{
+    width: 20%;
+    height: auto;
+}
+
+.about-a:hover>.down-menu{
+    display: block;
+}
+
+.pd-a:hover>.pd-menu{
+    display: flex;
+}
+
+
+.pd-menu li h2{
+    font-size: 25px;
+    position: relative;
+    top: -25px;
+    color: white;
+    font-weight: bolder;
+}
+
 
 @media(max-width:745px) {
     .header .menu{
@@ -524,7 +602,7 @@ footer .line{
     }
 
     .footer-down>li{
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #e9e9e9b0;
         padding-bottom: 10px;
     }
 
@@ -629,7 +707,16 @@ footer .line{
 .about-text1{
     margin: 25px 0 25px 0;
     padding: 50px 75px;
-    background-color: rgba(207, 207, 207, 0.329);
+    position: relative;
+}
+.about-text1::after{
+    content: '';
+    width: 20px;
+    height: 150px;
+    background-color: #E5C45D;
+    position: absolute;
+    top: -50px;
+    left: 50px;
 }
 
 .about-text1 h1{
@@ -660,7 +747,18 @@ footer .line{
         font-size: 28px;
         line-height: 1.2;
     }
-
+    .about-text1::after{
+        display: none;
+    }
+    .about-text1 h1:nth-child(1)::before{
+        content: '';
+        position: absolute;
+        top: 26px;
+        left: 0;
+        width: 30px;
+        height: 25px;
+        background: #E5C45D;
+    }
 }
 
 
@@ -671,7 +769,7 @@ footer .line{
 }
 
 .about-part1 .part-l, .about-part2 .part-l{
-    width: 60%;
+    width: 55%;
 }
 
 .about-part1 .part-r, .about-part2 .part-r{
@@ -681,17 +779,60 @@ footer .line{
 
 .about-part1 .part-l,.about-part2 .part-l{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .about-part1 .part-l img,.about-part2 .part-l p{
-    width: 60%;
+    width: 80%;
 }
 
 .about-part1 .part-r p{
     margin-bottom: 25px;
 }
+
+.about-part1-1{
+    position: relative;
+    margin: 85px auto;
+}
+
+.about-part1-1 h1{
+    margin: 85px auto;
+    padding: 25px;
+    padding-left: 125px;
+    font-size: 26px;
+    width: 80%;
+    border: 2px solid #E5C45D;
+    border-radius: 15px;
+    line-height: 1.3;
+}
+
+.about-part1-1 .blackseed{
+    position: absolute;
+    bottom: -80px;
+    left: 50px;
+    width: 220px;
+}
+
+.drop{
+    position: absolute;
+}
+.drop1{
+    top: 0;
+    right: 20px;
+    width: 6%;
+}
+.drop2{
+    top: -95px;
+    right: 80px;
+    width: 5%;
+}
+.drop3{
+    top: 90px;
+    right: 90px;
+    width: 9%;
+}
+
 @media(max-width:745px) {
     .about-part1{
         flex-direction: column;
@@ -707,13 +848,51 @@ footer .line{
     .about-part1 .part-l img, .about-part2 .part-l p{
         width: 100%;   
     }
+    .about-part1-1 .blackseed{
+        width: 170px;
+        left: initial;
+        right: 20px;
+    }
+    .about-part1-1 h1{
+        padding: 25px 25px 50px 25px;
+        margin: 10px auto 85px;
+        font-size: 23px;
+    }
+
+    .about-part1-1{
+        margin: 0 auto;
+    }
+    .drop1{
+        right: initial;
+        top: initial;
+        bottom: -52px;
+        left: 120px;
+        width: 8%;
+    }
+    .drop2{
+        right: initial;
+        top: initial;
+        left: 180px;
+        bottom: -32px;
+    }
+    .drop3{
+        right: initial;
+        top: initial;
+        bottom: -25px;
+        left: 50px;
+        width: 12%;
+    }
 }
 
 /*----------------------------------------*/
 .about-part2{
-    margin-top: 120px;
+    padding-top: 50px;
     display: flex;
-    margin-bottom: 85px;
+    padding-bottom: 100px;
+    background-image: url('../img/team/bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .about-part2 .part-l img{
@@ -738,7 +917,7 @@ footer .line{
 }
 
 .part-r .f-born{
-    margin-top: 60px;
+    margin-top: 10px;
     font-size: 38px;
     color: #E5C45D;
 }
@@ -748,15 +927,12 @@ footer .line{
         flex-direction: column;
         padding: 20px;
         margin-top: 0px;
+        margin-bottom: 30px;
         position: relative;
-    }
-    .about-part2 .part-l{
-        flex-direction: column-reverse;
     }
 
     .about-part2 .part-l img{
-        width: 60%;
-        margin-top: 0;
+        width: 80%;
         margin-bottom: 25px;
     }
 
@@ -765,15 +941,19 @@ footer .line{
     }
 
     .about-part2 .part-r img{
-        width: 40%;
+        width: 42%;
         position: absolute;
-        top: 18%;
+        top: 50%;
         right: 5%;
     }
 
     .about-part2 .part-l p{
-        margin-top: 30px;
     }
+    .part-r .f-born{
+        font-size: 24px;
+    }
+
+    
 }
 
 
@@ -787,4 +967,78 @@ footer .line{
 
 
 /*-------------------------------------------------*/
+
+
+
+/*----------------------------------business page------------------------------------------*/
+.business.banner{
+    width: 100%;
+    height: 573.7px;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: url('../img/business/beautiful-young-smiling-asian-woman-working-laptop-drinking-coffee.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.business.banner .banner-text{
+    background-color: white;
+    width: 45%;
+    padding: 30px 45px;
+    position: absolute;
+    left: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.business.banner .banner-text .f-born{
+    font-size: 22px;
+}
+.banner-text-ph{
+    display: none;
+}
+
+.banner-text-ph h1{
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.busi-adv{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+.busi-adv .adv-part{
+    width: 25%;
+}
+.busi-adv .adv-part .adv-img{
+    width: 100%;
+    height: 250px;
+    background-color: antiquewhite;
+}
+
+@media(max-width:745px) {
+    .business.banner{
+        height: 276px;
+        background-image: url('../img/business/beautiful-young-smiling-asian-woman-working-laptop-drinking-coffee\ ph.jpg');
+
+    }
+    .business.banner .banner-text{
+        display: none;
+    }
+    .banner-text-ph{
+        display: block;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .banner-text .f-born{
+        font-size: 22px;
+    }
+}
+
+
+/*----------------------------------------*/
 

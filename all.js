@@ -13,6 +13,7 @@ $(document).ready(function () {
     $('.aside-btn').click(function (e) { 
         e.preventDefault();
         $('.aside').toggleClass('aside-active');
+        $('body').toggleClass('aside-open');
     });
 });
 
