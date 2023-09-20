@@ -291,6 +291,13 @@ p{
     font-weight: bolder;
 }
 
+.ph-menu-btn{
+    display: flex;
+    align-items: center;
+}
+.ph-menu-btn a{
+    margin-right: 15px;
+}
 
 @media(max-width:745px) {
     .header .menu{
