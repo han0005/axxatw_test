@@ -1143,17 +1143,6 @@ footer .line{
     line-height: 1.2;
 }
 
-.map{
-    height: auto;
-    width: 100%;
-    background-color: rgb(238, 238, 238);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    position: relative;
-}
 .contact-banner img{
     display: none;
 }
@@ -1170,7 +1159,7 @@ footer .line{
     margin-bottom: 10px;
 }
 
-.contact-part h2{
+.contact-part h2, .axxaw-info-l>h2:nth-child(1){
     font-size: 23px;
     font-weight: bold;
     margin: 5px auto 10px;
@@ -1185,6 +1174,74 @@ footer .line{
     width: 40%;
     margin-bottom: 30px;
 }
+
+.world-contact-title{
+    height: 250px;
+    width: 100%;
+    background:linear-gradient(black white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('../img/contact/32613745_global_network.png');
+    background-size: cover;
+}
+.axxatw-info{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.axxaw-info-l{
+    width: 55%;
+}
+.axxaw-info-l{
+    padding: 20px;
+}
+.axxaw-info-r{
+    width: 40%;   
+    height: 350px;
+}
+
+.world-contact-title h2{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.add-line{
+    background-color: #22BA4F;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    width: 320px;
+    margin: 40px auto 0;
+}
+.add-line img{
+    width: 100px;
+}
+
+.add-line-text{
+    margin-left: 20px;
+}
+.add-line-text h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 14px;
+    color: #fff;
+    line-height: 1.3;
+}
+.add-line-text a{
+    background-color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: #22BA4F;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 
 @media(max-width:745px) {
     .contact-banner{
@@ -1202,8 +1259,22 @@ footer .line{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 0;
     }
     .world-contact .contact-part{
         width: 80%;
+    }
+    .add-line img{
+        width: 100px;
+    }
+    .axxaw-info-l, .axxaw-info-r{
+        width: 90%;
+    }
+    .axxatw-info{
+        justify-content: center;
+    }
+    .axxaw-info-l{
+        padding: 0;
+        margin-bottom: 30px;
     }
 }
