@@ -267,6 +267,7 @@ p{
     background-color: #E5C45D;
     padding: 0px 50px;
     display: none;
+    z-index: 1;
 }
 .menu .pd-menu li{
     width: 20%;
@@ -922,6 +923,9 @@ footer .line{
     color: #E5C45D;
 }
 
+
+
+
 @media(max-width:745px) {
     .about-part2{
         flex-direction: column;
@@ -1011,12 +1015,57 @@ footer .line{
     margin: 50px auto;
 }
 .busi-adv .adv-part{
-    width: 25%;
+    width: 30%;
 }
 .busi-adv .adv-part .adv-img{
     width: 100%;
     height: 250px;
     background-color: antiquewhite;
+}
+
+.adv-part h2{
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: bold;
+    margin: 10px 10px;
+}
+.adv-part p{
+    margin: 0 10px;
+}
+
+.join-us{
+    height: 250px;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 170px;
+    position: relative;
+}
+
+.join-us-box{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.join-us-box .ap-join, .join-us-box .contact-service{
+    width: 46%;
+    background-color: white;
+    border: 1px solid #E5C45D;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.join-us-box h2{
+    font-size: 23px;
+    font-weight: bold;
+    margin: 5px auto 10px;
 }
 
 @media(max-width:745px) {
@@ -1037,8 +1086,124 @@ footer .line{
     .banner-text .f-born{
         font-size: 22px;
     }
+
+    .busi-adv{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .busi-adv .adv-part{
+        width: 80%;
+    }
+    .adv-part p{
+        margin-bottom: 50px;
+    }
+    .join-us-box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .join-us-box .ap-join, .join-us-box .contact-service{
+        width: 90%;
+        margin-bottom: 25px;
+    }
+    .join-us{
+        margin-bottom: 290px;
+    }
 }
 
 
-/*----------------------------------------*/
+/*--------------------contact--------------------*/
+.contact-banner{
+    width: 100%;
+    height: 573.7px;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: url('../img/contact/大廳櫃台.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.contact-banner .banner-text{
+    background-color: white;
+    width: 45%;
+    padding: 30px 45px;
+    position: absolute;
+    left: 90px;
+    top: 75%;
+    transform: translateY(-50%);
+}
 
+.contact-banner .banner-text .f-born{
+    font-size: 22px;
+}
+
+.banner-text-ph h1{
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.map{
+    height: auto;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+.contact-banner img{
+    display: none;
+}
+
+.world-contact{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+    flex-wrap: wrap;
+}
+
+
+.contact-part p{
+    margin-bottom: 10px;
+}
+
+.contact-part h2{
+    font-size: 23px;
+    font-weight: bold;
+    margin: 5px auto 10px;
+    border-bottom: 1px solid #E5C45D;
+    padding-bottom: 3px;
+}
+.contact-part .f-born{
+    margin-left: 10px;
+}
+
+.world-contact .contact-part{
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+@media(max-width:745px) {
+    .contact-banner{
+        height: auto;
+    }
+
+    .contact-banner img{
+        display: block;
+        width: 100%;
+    }
+    .contact-banner .banner-text{
+        display: none;
+    }
+    .world-contact{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .world-contact .contact-part{
+        width: 80%;
+    }
+}
