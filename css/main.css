@@ -1451,6 +1451,7 @@ footer .line{
     }
     .expert-team{
         background-image: url('../img/team/crew\ page\ ph.png');
+        background-size: cover;
         height: 300px;
         background-position: center;
     }
@@ -1465,6 +1466,9 @@ footer .line{
     }
     .team3 .part3_text .f-born{
         font-size: 20px;
+    }
+    .expert-team{
+        background-attachment: unset;
     }
 }
 @media(max-width:426px) {
