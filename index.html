@@ -107,13 +107,19 @@
 
         <div class="part2">
             <div class="part left">
-                <img src="img/IMG_1027.png">
+                <img class="show-Pd" src="img/IMG_1027.png">
+                <ul class="pd-thumb">
+                    <li><img src="img/pd/源氣去背.png" alt="" onclick="imgSlider('img/pd/源氣.png')"></li>
+                    <li><img src="img/pd/源優去背.png" alt="" onclick="imgSlider('img/pd/源優.png')"></li>
+                    <li><img src="img/pd/源益去背.png" alt="" onclick="imgSlider('img/pd/源益.png')"></li>
+                </ul>
             </div>
             <div class="part right">
                 <h1>照顧您全方位健康 <br><span class="f-born">Our Products</span></h1>
                 <p>我們的明星產品“源氣”選用黑小茴香種籽，採用專利冷壓技術，將種籽的豐富營養保留下來，含有豐富的脂肪酸、礦物質，是您營養補給維持健康的好選擇! 除了源氣外有源益(益生菌)與源優(膠原蛋白)!</p>
                 <a href="" class="btn">探索產品</a>
             </div>
+            
         </div>
 
         <div class="part3">
@@ -242,6 +248,11 @@
 
 
     })        
+  </script>
+  <script>
+        function imgSlider(anything){
+            document.querySelector('.show-Pd').src=anything
+        }
   </script>
 </body>
 </html>

@@ -417,6 +417,7 @@ p{
     justify-content: space-around;
     align-items: center;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .part2 .left{
@@ -439,7 +440,7 @@ p{
 @media(max-width:745px) {
     .part2{
         flex-direction: column-reverse;
-        margin-bottom: -20px;
+        margin-bottom: 0px;
         margin-top: 260px;
         background-color: white;
     }
@@ -448,6 +449,7 @@ p{
     }
     .part2 .left{
         width: 85%;
+        padding-bottom: 35px;
     }
 }
 
@@ -491,6 +493,31 @@ p{
     width: 32%;
 }
 
+.pd-thumb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pd-thumb li{
+    display: inline-block;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.part2 .imgBox{
+    width: 100%;
+}
+.pd-thumb li img{
+    max-width: 70px;
+}
+.pd-thumb li:hover{
+    transform: translateY(-15px);
+}
+
+.show-Pd{
+    width: 80%;
+}
+
 @media(max-width:745px) {
     .part3{
         margin-bottom: 0px;
@@ -502,6 +529,12 @@ p{
 
     .part3 ul li{
         width: 100%;
+    }
+    .pd-thumb li{
+        margin: 0 5px;
+    }
+    .pd-thumb li img{
+        max-width: 65px;
     }
 }
 
@@ -1287,6 +1320,10 @@ footer .line{
 }
 
 /*--------------------team--------------------*/
+.team3{
+    background-image: url('../img/team/expert\ bg.png');
+    background-size: cover;
+}
 .team1 h1,.team2 h1{
     line-height: 0.8;
 }
@@ -1334,7 +1371,7 @@ footer .line{
     width: 30%;
 }
 .team2 .right .shin{
-    width: 75%;
+    width: 95%;
     position: relative;
     z-index: 1;
 }
@@ -1347,6 +1384,52 @@ footer .line{
     background-attachment: fixed;
 }
 
+.team3 .part3_text{
+    background-color: #fff;
+    width: 85%;
+    margin: auto;
+    position: relative;
+    top: -100px;
+    left: 0;
+}
+
+.team3 .part3_text h1{
+    text-align: center;
+    margin-top: 25px;
+} 
+
+.part3_text .our-expert{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.part3_text .our-expert li{
+    width: 28%;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start ;
+
+}
+.our-expert li img{
+    width: 80%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.our-expert li h2{
+    font-size: 20px;
+    margin: 10px auto 5px;
+}
+.our-expert li p{
+    font-size: 16px;
+    line-height: 1.6em;
+}
+.team3 .part3_text .our-expert li h3{
+    text-align: left;
+    font-size: 22px;
+    margin: 3px 0px 10px;
+}
 
 
 @media(max-width:745px) {
@@ -1369,6 +1452,25 @@ footer .line{
     .expert-team{
         background-image: url('../img/team/crew\ page\ ph.png');
         height: 300px;
-        
+        background-position: center;
+    }
+    .team3 .part3_text{
+        width: 90%;
+    }
+    .team2 .right .shin{
+        width: 75%;
+    }
+    .part3_text .our-expert li{
+        width: 45%;
+    }
+    .team3 .part3_text .f-born{
+        font-size: 20px;
     }
 }
+@media(max-width:426px) {
+    .part3_text .our-expert li{
+        width: 90%;
+    }
+
+}
+
