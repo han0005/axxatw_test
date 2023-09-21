@@ -1285,3 +1285,90 @@ footer .line{
         margin-bottom: 30px;
     }
 }
+
+/*--------------------team--------------------*/
+.team1 h1,.team2 h1{
+    line-height: 0.8;
+}
+
+.team2 .right{
+    position: relative;
+    top: 0;
+}
+
+.team1 .part,.team2 .part{
+    position: relative;
+}
+
+.team1 .left .fk-bg{
+    position: absolute;
+    top: 50px;
+    left: 20%;
+    z-index: -1;
+}
+.fk-bg-drop{
+    position: absolute;
+    top: 42%;
+    right: 20px;
+    z-index: 0;
+    width: 40%;
+}
+.frankee{
+    position: relative;
+    z-index: 1;
+    width: 50%;
+}
+
+.team2 .right .sh-bg{
+    position: absolute;
+    top: 0;
+    right: 15%;
+    z-index: -1;
+    width: 15%;
+}
+.team2 .right .sh-bg-drop{
+    position: absolute;
+    top: 42%;
+    left: 45px;
+    z-index: 0;
+    width: 30%;
+}
+.team2 .right .shin{
+    width: 75%;
+    position: relative;
+    z-index: 1;
+}
+
+.expert-team{
+    background-image: url('../img/team/crew\ page.png');
+    background-size: cover;
+    background-position: right;
+    height: 420px;
+    background-attachment: fixed;
+}
+
+
+
+@media(max-width:745px) {
+    .team2{
+        flex-direction: column-reverse;
+    }
+    .team1{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .team1 .left .fk-bg{
+        top: 15px;
+        left: 45px;
+        width: 16%;
+        z-index: 1;
+    }
+    .team1 .part h1 span,.team2 .part h1 span{
+        font-size: 25px;
+    }
+    .expert-team{
+        background-image: url('../img/team/crew\ page\ ph.png');
+        height: 300px;
+        
+    }
+}
