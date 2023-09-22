@@ -682,13 +682,14 @@ footer .line{
 
 
 /*---------------go top------------------*/
-#gotop{
+.gotop{
     position: fixed;
     bottom: 50px;
     right: 10px;
+    z-index: 99;
 }
 
-#gotop a{
+.gotop a{
     display: block;
     height: 50px;
     width: 50px;
@@ -1037,7 +1038,7 @@ footer .line{
     transform: translateY(-50%);
 }
 
-.business.banner .banner-text .f-born{
+.banner-text .f-born{
     font-size: 22px;
 }
 .banner-text-ph{
@@ -1475,6 +1476,241 @@ footer .line{
     .part3_text .our-expert li{
         width: 90%;
     }
-
 }
 
+/*----------------SO Plus----------------*/
+.SOPlus.banner{
+    width: 100%;
+    height: 573.7px;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: url('../img/pd/so_plus/天然背景.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.SOPlus.banner .banner-text{
+    color: #242424;
+    width: 50%;
+    padding: 30px 45px;
+    position: absolute;
+    left: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffffd1;
+}
+.pdBox{
+    position: absolute;
+    right: 20px;
+    bottom: -40px;
+}
+
+.SOPlus.banner .pdBox{
+    max-width: 50%;
+}
+
+.sp-part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px auto 0;
+    position: relative;
+}
+.sp-part1 img{
+    width: 75%;
+}
+.part1-textbox{
+    width: 60%;
+    padding: 80px;
+}
+.part1-imgbox{
+    width: 40%;
+}
+
+.part1-textbox h2{
+    font-size: 32px;
+    line-height: 1.3em;
+    font-weight: bolder;
+    margin-bottom: 18px;
+}
+.pd-title{
+    text-align: center;
+    margin: 100px auto 15px;
+}
+.ingredien1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.ingredien1 .ingredien1-textbox{
+    width: 60%;
+    padding-left: 10%;
+}
+.textbox h2,.benefit-card h2{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.ingredien1 .ingredien1-imgbox{
+    width: 35%;
+}
+
+.ingredien2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.ingredien2 li{
+    width: 27%;
+    margin: 3%;
+    text-align: center;
+}
+
+.ingre-bg{
+    position: absolute;
+    top: -370px;
+    left: 0;
+    z-index: -1;
+}
+.ingre-bg-ph{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.sp-benefit .benefit-card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sp-benefit .benefit-card li{
+    width: 20%;
+    margin: 2%;
+    border: 1px solid rgb(255, 201, 23);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+@media(max-width:821px) {
+    .ingre-bg{
+        top: -220px;
+    }
+    .ingredien2 li{
+        width: 40%;
+    }
+}
+
+
+@media(max-width:745px) {
+    .SOPlus.banner{
+        flex-direction: column;
+        margin-bottom: 50px;
+        height: 380px;
+    }
+    .SOPlus.banner .banner-text{
+        color: #fff;
+        width: 90%;
+        padding: 30px 45px;
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: translateY(0);
+        display: none;
+    }   
+    .SOPlus.banner .pdBox{
+        max-width: 65%;
+    }
+    .pdBox{
+        bottom: -25px;
+    }
+    .sp-part1{
+        flex-direction: column-reverse;
+    }
+    .part1-textbox{
+        position: absolute;
+        padding: 25px 30px 10px;
+        width: 82%;
+        background-color: #ffcb19bf;
+        color: #fff;
+        border-radius: 15px;
+    }
+    .part1-textbox h2{
+        font-size: 24px;
+    }
+    .part1-textbox p{
+        display: none;
+    }
+    .sp-part1 img{
+        width: 100%;
+        display: none;
+    }
+    .part1-imgbox{
+        width: 90%;
+        background-image: url('../img/pd/so_plus/seedoil.png');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center center;
+        height: 320px;
+    }
+    .sp-part1{
+        margin: 10px auto 0;
+    }
+    .ingredien1{
+        flex-direction: column-reverse;
+    }
+    .ingredien1 .ingredien1-textbox{
+        padding-left: 0;
+        width: 70%;
+    }
+    .ingredien1 .ingredien1-imgbox{
+        width: 50%;
+    }
+    .ingre-bg{
+        display: none;
+        top: -350px;
+    }
+    .ingre-bg-ph{
+        display: block;
+        width: 100%;
+        top: -310px;
+    }
+    .textbox h2{
+        font-size: 24px;
+        text-align: center;
+    }
+    .ingredien2 li{
+        width: 62%;
+    }
+    .sp-benefit .benefit-card li{
+        display: flex;
+        width: 90%;
+        align-items: center;
+        padding: 15px;
+    }
+    .benefit-card img{
+        width: 35%;
+    }
+    .sp-benefit .benefit-card li,.benefit-card h2{
+        text-align: left;
+    }
+    .benefit-card-text h2{
+        font-size: 22px;
+    }
+    .benefit-card-text{
+        padding-left: 15px;
+    }
+}
+@media(max-width:426px) {
+    .SOPlus.banner .pdBox{
+        max-width: 87%;
+    }
+}  

@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    $('.gotop a').click(function(event){
+        event.preventDefault();
+        $('html,body').animate({
+            scrollTop:0}, 700);
+    });
+
     $('.footer-down li').click(function (e) { 
         e.preventDefault();
         $(this).find('.footer-links').toggleClass('open').parent().siblings().find('.footer-links').removeClass('open');
@@ -15,6 +21,7 @@ $(document).ready(function () {
         $('.aside').toggleClass('aside-active');
         $('body').toggleClass('aside-open');
     });
+
 });
 
 
