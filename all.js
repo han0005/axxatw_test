@@ -1,10 +1,4 @@
 $(document).ready(function () {
-    $('.gotop a').click(function(event){
-        event.preventDefault();
-        $('html,body').animate({
-            scrollTop:0}, 700);
-    });
-
     $('.footer-down li').click(function (e) { 
         e.preventDefault();
         $(this).find('.footer-links').toggleClass('open').parent().siblings().find('.footer-links').removeClass('open');
@@ -19,9 +13,14 @@ $(document).ready(function () {
     $('.aside-btn').click(function (e) { 
         e.preventDefault();
         $('.aside').toggleClass('aside-active');
+        $('.bar').toggleClass('b-open');
         $('body').toggleClass('aside-open');
     });
 
+    $('.gotop').click(function(event){
+        event.preventDefault();
+        $('html,body').animate({scrollTop:0},1000);
+    })
 });
 
 
