@@ -91,7 +91,8 @@ p{
 @media(max-width:745px) {
     h1{
         line-height: 1;
-        font-size: 38px;
+        font-size: 32px;
+        line-height: 1.2em;
     }
 
     h1 span{
@@ -225,7 +226,6 @@ p{
 .aside .pd-a .pd-menu{
     display: none;
 }
-
 
 
 @media(max-width:745px) {
@@ -377,15 +377,19 @@ p{
 }
 
 /*------------------------以上為常用CSS-------------------------*/
-.banner img{
-    width: 70%;
+.index-banner{
+    height: 562px;
+    background-image: url(../img/首頁banner\ pc.jpg);
+    background-size: cover;
+    background-position: center;
 }
-
 @media(max-width:745px) {
-    .banner img{
-        width: 100%;
+    .index-banner{
+        height: 420px;
+        background-image: url(../img/首頁banner\ mobile.jpg);
     }
-}
+
+}   
 
 
 
@@ -452,9 +456,9 @@ p{
     }
 
     .part1 .right{
-        width: 95%;
+        width: 105%;
         position: absolute;
-        top: 205px;
+        top: 236px;
         z-index: -1;
     }
 
@@ -475,6 +479,7 @@ p{
 .part2 .left{
     width: 50%;
     text-align: center;
+    position: relative;
 }
 
 .part2 .right{
@@ -549,6 +554,8 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    bottom: 25px;
 }
 .pd-thumb li{
     display: inline-block;
@@ -560,7 +567,7 @@ p{
     width: 100%;
 }
 .pd-thumb li img{
-    max-width: 70px;
+    max-width: 50px;
 }
 .pd-thumb li:hover{
     transform: translateY(-15px);
@@ -586,7 +593,10 @@ p{
         margin: 0 5px;
     }
     .pd-thumb li img{
-        max-width: 65px;
+        max-width: 50px;
+    }
+    .show-Pd{
+        width: 100%;
     }
 }
 
@@ -1373,6 +1383,30 @@ footer .line{
 }
 
 /*--------------------team--------------------*/
+.ourteam-banner{
+    height: 562px;
+    background-image: url(../img/axxa+group.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+.ourteam-banner img{
+    display: none;
+}
+
+.team-title{
+    padding-top: 75px;
+    text-align: center;
+}
+.team-title h1{
+    color: #fff;
+}
+
+.team-title .f-born{
+    font-size: 32px;
+    text-align: center;
+    margin-top: 12px;
+}
+
 .team3{
     background-image: url('../img/team/expert\ bg.png');
     background-size: cover;
@@ -1522,6 +1556,15 @@ footer .line{
     }
     .expert-team{
         background-attachment: unset;
+    }
+    .ourteam-banner{
+        width: 100%;
+        height: 320px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .team-title .f-born{
+        font-size: 20px;
     }
 }
 @media(max-width:426px) {
