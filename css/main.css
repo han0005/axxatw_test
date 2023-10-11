@@ -1290,6 +1290,20 @@ footer .line{
     background-image: url('../img/contact/32613745_global_network.png');
     background-size: cover;
 }
+.world-contact-title a{
+    margin-top: 15px;
+    letter-spacing: 3px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #E5C45D;
+}
+.world-contact-title a:hover{
+    background-color: #E5C45D;
+    color: #fff;
+}
 .axxatw-info{
     padding: 20px;
     display: flex;
@@ -1297,7 +1311,12 @@ footer .line{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
+.axxatw-info .axxaw-info-l h2{
+    font-weight: 700;
+}
+.axxatw-info .axxaw-info-l p{
+    margin-bottom: 10px;
+}
 .axxaw-info-l{
     width: 55%;
 }
@@ -1309,17 +1328,13 @@ footer .line{
     height: 350px;
 }
 
-.world-contact-title h2{
-    font-size: 25px;
-    font-weight: bolder;
-}
 .add-line{
     background-color: #22BA4F;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     width: 320px;
-    margin: 40px auto 0;
+    margin: 20px 0px;
 }
 .add-line img{
     width: 100px;
@@ -1343,6 +1358,12 @@ footer .line{
     color: #22BA4F;
     text-decoration: none;
     font-weight: bold;
+}
+.world-contact-title h1 span{
+    font-family: 'lexend';
+    color: #E5C45D;
+    margin-right: 15px;
+    text-align: center;
 }
 
 
@@ -1375,6 +1396,7 @@ footer .line{
     }
     .axxatw-info{
         justify-content: center;
+        padding: 0;
     }
     .axxaw-info-l{
         padding: 0;
@@ -1809,3 +1831,180 @@ footer .line{
         max-width: 87%;
     }
 }  
+
+/*---------------tech-----------------------*/
+.tech.banner{
+    height: 520px;
+    background-image: url(../img/tech/banner\ bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 250px;
+}
+.tech-text{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    background-color: #fff;
+    background-image: url(../img/tech/mix-herbs-green-branches-leaves-mint-eucalyptus-rosemary-aloe-vera-plants-collection-white.jpg);
+    background-size: cover;
+    transform: translateX(-50%);
+}
+
+.tech-text h1{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    width: 56%;
+    margin-top: 50px;
+}
+.why-seed{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    border-bottom: 1px solid #3E3A39;
+    padding-bottom: 50px;
+}
+
+.why-seed h1{
+    line-height: 1.5;
+}
+
+.extraction{
+    position: relative;
+    padding: 100px 20% 100px 30%;
+}
+.extraction h1{
+    font-size: 32px;
+}
+.extraction img{
+    position: absolute;
+    left: 0;
+    top: -125px;
+    width: 24%;
+}
+
+.journey{
+    text-align: center;
+}
+
+.journey-p{
+    margin: 25px auto 100px;
+    text-align: center;
+}
+.journey h1{
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.journey-part{
+    display: flex;
+    justify-content: center;
+}
+.journey-part li{
+    width: 25%;
+    margin-left: 15px;
+}
+.journey-part li h2{
+    font-size: 22px;
+    font-weight: 800;
+    margin: 12px auto 6px;
+    color: #3E3A39;
+}
+.journey-part li p{
+    padding: 0px 12px 15px;
+}
+
+.tech-content ul li{
+    display: flex;
+    margin: 50px auto;
+    padding-left: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-content ul li h1{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.tech-content ul li .tech-content-img{
+    width: 30%;
+}
+.tech-content ul li .tech-content-text{
+    width: 70%;
+    padding: 25px 50px;
+}
+.TM-s{
+    font-size: 20px;
+}
+
+@media(max-width:745px) {
+    .tech-text{
+        top: 0;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: 392px;
+        width: 92%;
+    }
+    .tech-text h1{
+        width: 70%;
+        font-size: 22px;
+    }
+    .tech.banner{
+        height: 386px;
+    }
+    .tech.banner{
+        margin-bottom: 0;
+    }
+    .why-seed{
+        width: 80%;
+    }
+    .extraction img{
+        top: -376px;
+        width: 21%;
+    }
+    .extraction{
+        padding: 10%;
+    }
+    .extraction h1{
+        font-size: 24px;
+    }
+    .journey{
+        background-color: cornsilk;
+    }
+    .journey h1{
+        padding-top: 25px;
+    }
+    .journey-part{
+        flex-wrap: wrap;
+    }
+    .journey-part li{
+        width: 90%;
+        margin-left: 0;
+        margin-bottom: 12px;
+        background-color: #fff;
+    }
+    .tech-content ul li{
+        flex-direction: column;
+        padding-left: 0;
+    }
+    .tech-content ul li .tech-content-img,.tech-content ul li .tech-content-text{
+        width: 90%;
+    }
+    .tech-content ul li .tech-content-text{
+        padding: 25px 10px;
+    }
+    .journey-p{
+        margin: 0;
+        padding: 25px;
+        font-weight: 900;
+    }
+    .tech-content ul li h1 br{
+        display: none;
+    }
+}
