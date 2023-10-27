@@ -110,10 +110,17 @@ p{
 
 
 .container{
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     overflow-x: hidden;
 }
+
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
 
 /*--------------------以下為aside------------------------*/
 .ph-menu-btn{
@@ -383,6 +390,25 @@ p{
     background-size: cover;
     background-position: center;
 }
+
+.index-banner1{
+    height: 570px;
+    background-image: url(../img/index/天雨台灣首頁-03.jpg);
+    background-size: cover;
+    background-position: left;
+    position: relative;
+}
+.white-part{
+    width: 100%;
+    background-image: url(../img/index/天雨台灣首頁-08.png);
+    background-size: cover;
+    position: absolute;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 @media(max-width:745px) {
     .index-banner{
         height: 420px;
@@ -544,6 +570,7 @@ p{
 .part3 ul{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .part3 ul li{
@@ -597,6 +624,119 @@ p{
     }
     .show-Pd{
         width: 100%;
+    }
+}
+/*-------------------index wrap1-------------------------*/
+.index-wrap .part{
+    padding: 0px 0px;
+}
+.index-wrap .part h1{
+    font-size: 37px;
+}
+
+.index-wrap .part1,.index-wrap .part2,.index-wrap .part3-team{
+    height: 450px;
+    padding: 0;
+}
+
+.index-wrap .part1 .left{
+    width: 50%;
+    padding: 35px;
+}
+
+.index-wrap .part1 .right{
+    width: 50%;
+    text-align: center;
+}
+.index-wrap .part1 .right img{
+    width: 100%;
+    text-align: center;
+}
+
+.index-wrap .part2{
+    flex-direction: row-reverse;
+}
+
+.index-wrap .part2 .right,.index-wrap .part3-team .left {
+    padding: 35px;
+}
+
+.part3-team {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.index-wrap .part3-team .right,.index-wrap .part3-team .left{
+    width: 100%;
+}
+
+.index-wrap .part3{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.index-wrap .part3 .oil img{
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: -100px;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.index-wrap .part3 .part3_text{
+    padding-top: 250px;
+    padding: 150px 5px 70px 30px;
+    width: 65%;
+}
+.index-wrap .part3 .part3-img{
+    width: 35%;
+}
+
+@media(max-width:745px) {
+    .index-banner1{
+        background-image: url(../img/index/天雨台灣首頁\ banner.jpg);
+    }
+    .index-wrap .part h1{
+        font-size: 32px;
+    }
+    .index-wrap .part3 .oil img{
+        object-fit: contain;
+    }
+    .index-wrap .part1,.index-wrap .part2,.index-wrap .part3-team{
+        height: auto;
+        padding: 0;
+    }
+    .index-wrap .part1 .left,.index-wrap .part2 .right{
+        width: 100%;
+        padding: 5px 25px 80px;
+    }
+    .index-wrap .part1 .right{
+        width: 100%;
+        top: 300px;
+    }
+    .index-wrap .part2 .left,.index-wrap .part3 .part3_text{
+        width: 100%;
+        top: 0px;
+    }
+    .index-wrap .part2{
+        flex-direction: column-reverse;
+        margin-top: 310px;
+    }
+    .index-wrap .part3-team{
+        flex-direction: column-reverse;
+    }
+    .index-wrap .part3{
+        flex-direction: column;
+    }
+    .index-wrap .part3 .part3-img{
+        width: 60%;
+        position: relative;
     }
 }
 
