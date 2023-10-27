@@ -737,6 +737,10 @@ p{
     .index-wrap .part3 .part3-img{
         width: 60%;
         position: relative;
+        display: none;
+    }
+    .index-wrap .part3 .part3_text{
+        padding: 180px 20px 10px;
     }
 }
 
