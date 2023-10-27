@@ -464,7 +464,7 @@ p{
     color: #fff;
     background-color: #E5C45D;
     border-radius: 15px;
-    margin-top: 15px;
+    margin-top: 25px;
     line-height: 2;
     text-decoration: none;
     font-weight: 600;
@@ -696,6 +696,15 @@ p{
 }
 .index-wrap .part3 .part3-img{
     width: 35%;
+}
+
+.index-wrap .part .index-btn{
+    display: flex;
+}
+
+.index-wrap .part .btn{
+    width: 86px;
+    margin-right: 10px;
 }
 
 @media(max-width:745px) {
