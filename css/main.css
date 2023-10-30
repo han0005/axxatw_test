@@ -392,12 +392,22 @@ p{
 }
 
 .index-banner1{
-    height: 570px;
+    height: 682px;
     background-image: url(../img/index/天雨台灣首頁-03.jpg);
     background-size: cover;
     background-position: left;
     position: relative;
 }
+.index-banner1 h1{
+    font-family: 'bornready';
+    position: absolute;
+    right: 40%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    color: #969696;
+    font-weight: 400;
+}
+
 .white-part{
     width: 100%;
     background-image: url(../img/index/天雨台灣首頁-08.png);
@@ -408,13 +418,25 @@ p{
     left: 0;
     right: 0;
 }
+@media(max-width:1200px) {
+    .index-banner1 h1{
+        right: 32%;
+    }
+}
+@media(max-width:900px) {
+    .index-banner1 h1{
+        right: 10%;
+    }
+}
 
 @media(max-width:745px) {
     .index-banner{
         height: 420px;
         background-image: url(../img/首頁banner\ mobile.jpg);
     }
-
+    .index-banner1 h1{
+        display: none;
+    }
 }   
 
 
@@ -430,15 +452,16 @@ p{
     justify-content: space-around;
     align-items: center;
     margin-top: 25px;
+    position: relative;
 }
 
 .part1 .left{
     width: 60%;
-    padding-left: 65px;
+    margin-left: 100px;
 }
 
 .part1 .right{
-    width: 40%;
+    width: 90%;
     text-align: center;
 }
 
@@ -468,6 +491,9 @@ p{
     line-height: 2;
     text-decoration: none;
     font-weight: 600;
+}
+.index-wrap1 .part1,.index-wrap1 .part2{
+    margin-bottom: 100px;
 }
 
 @media(max-width:745px) {
@@ -503,13 +529,15 @@ p{
 }
 
 .part2 .left{
-    width: 50%;
+    width: 80%;
     text-align: center;
     position: relative;
 }
 
-.part2 .right{
-    width: 50%;
+.part2 .right,.part1 .left{
+    width: 85%;
+    padding-bottom: 30px;
+    margin-left: 0;
 }
 
 .part2 .right h2{
@@ -635,7 +663,7 @@ p{
 }
 
 .index-wrap .part1,.index-wrap .part2,.index-wrap .part3-team{
-    height: 450px;
+    height: 530px;
     padding: 0;
 }
 
@@ -710,6 +738,9 @@ p{
 @media(max-width:745px) {
     .index-banner1{
         background-image: url(../img/index/天雨台灣首頁\ banner.jpg);
+        height: 592px;
+        background-size: cover;
+        background-position: center center;
     }
     .index-wrap .part h1{
         font-size: 32px;
@@ -735,7 +766,7 @@ p{
     }
     .index-wrap .part2{
         flex-direction: column-reverse;
-        margin-top: 310px;
+        margin-top: 386px;
     }
     .index-wrap .part3-team{
         flex-direction: column-reverse;
@@ -1559,7 +1590,7 @@ footer .line{
 
 /*--------------------team--------------------*/
 .ourteam-banner{
-    height: 562px;
+    height: 760px;
     background-image: url(../img/axxa+group.jpg);
     background-size: cover;
     background-position: bottom;
@@ -1586,6 +1617,11 @@ footer .line{
     background-image: url('../img/team/expert\ bg.png');
     background-size: cover;
 }
+
+.team1,.team2{
+    max-width: 1200px;
+    margin: auto;
+}
 .team1 h1,.team2 h1{
     line-height: 0.8;
 }
@@ -1604,6 +1640,7 @@ footer .line{
     top: 50px;
     left: 20%;
     z-index: -1;
+    width: 56px;
 }
 .fk-bg-drop{
     position: absolute;
@@ -1615,7 +1652,7 @@ footer .line{
 .frankee{
     position: relative;
     z-index: 1;
-    width: 50%;
+    width: 80%;
 }
 
 .team2 .right .sh-bg{
@@ -1672,7 +1709,7 @@ footer .line{
     display: flex;
     flex-direction: column;
     align-items: start ;
-
+    padding: 10px;
 }
 .our-expert li img{
     width: 80%;
@@ -1693,14 +1730,19 @@ footer .line{
     margin: 3px 0px 10px;
 }
 
+.ourteam-underline {
+    border-bottom: 1px solid #ffcb19;
+}
+
 
 @media(max-width:745px) {
     .team2{
         flex-direction: column-reverse;
+        margin-top: 50px;
     }
     .team1{
         flex-direction: column;
-        margin-top: 0;
+        margin-top: 50px;
     }
     .team1 .left .fk-bg{
         top: 15px;
@@ -1740,6 +1782,9 @@ footer .line{
     }
     .team-title .f-born{
         font-size: 20px;
+    }
+    .frankee{
+        width: 60%;
     }
 }
 @media(max-width:426px) {
@@ -2011,9 +2056,9 @@ footer .line{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 28px;
+    font-size: 36px;
     width: 56%;
-    margin-top: 50px;
+    margin-top: 86px;
 }
 .why-seed{
     text-align: center;
@@ -2037,12 +2082,14 @@ footer .line{
 .extraction img{
     position: absolute;
     left: 0;
-    top: -125px;
+    top: -450px;
     width: 24%;
 }
 
 .journey{
     text-align: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .journey-p{
@@ -2071,6 +2118,10 @@ footer .line{
     padding: 0px 12px 15px;
 }
 
+.tech-content{
+    max-width: 1200px;
+    margin: auto;
+}
 .tech-content ul li{
     display: flex;
     margin: 50px auto;
@@ -2085,6 +2136,7 @@ footer .line{
 }
 .tech-content ul li .tech-content-img{
     width: 30%;
+    text-align: end;
 }
 .tech-content ul li .tech-content-text{
     width: 70%;
@@ -2159,5 +2211,8 @@ footer .line{
     }
     .tech-content ul li h1 br{
         display: none;
+    }
+    .tech-content ul li .tech-content-img{
+        text-align: center;
     }
 }
