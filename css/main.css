@@ -553,7 +553,7 @@ p{
         flex-direction: column-reverse;
         margin-bottom: 0px;
         margin-top: 260px;
-        background-color: white;
+        background-color: #f5f5f5;
     }
     .part2 .right{
         width: 85%;
@@ -794,6 +794,7 @@ footer{
 .footer-area{
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 50px;
 }
 
 .footer-top{
@@ -824,6 +825,8 @@ footer{
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ffcb19;
 }
 
 .footer-links a{
@@ -1246,15 +1249,6 @@ footer .line{
 
     
 }
-
-
-
-
-
-
-
-
-
 
 
 /*-------------------------------------------------*/

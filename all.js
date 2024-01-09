@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     $('.footer-down li').click(function (e) { 
         e.preventDefault();
-        $(this).find('h2').toggleClass('hv');
+        $(this).find('h2').toggleClass('hv').parent().siblings().find('h2').removeClass('hv');
     });
 
     $('.aside-btn').click(function (e) { 
