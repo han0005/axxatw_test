@@ -88,6 +88,13 @@ p{
     line-height: 1.5;
     letter-spacing: 1px;
 }
+.so{
+    font-family: 'lexend';
+    color: #E5C45D;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
 @media(max-width:745px) {
     h1{
         line-height: 1;
@@ -350,7 +357,7 @@ p{
 }
 
 .pd-menu li h2{
-    font-size: 25px;
+    font-size: 22px;
     position: relative;
     top: -25px;
     color: white;
@@ -1875,6 +1882,7 @@ footer .line{
     font-weight: bold;
     margin-bottom: 8px;
     text-align: center;
+    color: #E5C45D;
 }
 
 .ingredien1 .ingredien1-imgbox{
@@ -1908,6 +1916,12 @@ footer .line{
     z-index: -1;
 }
 
+.sp-benefit{
+    background-image: url(../img/pd/so_plus/黑小茴香草.jpg);
+    background-position: bottom;
+    background-repeat: repeat-x;
+}
+
 .sp-benefit .benefit-card{
     display: flex;
     flex-wrap: wrap;
@@ -1920,6 +1934,30 @@ footer .line{
     padding: 25px;
     border-radius: 15px;
     text-align: center;
+    background-color: white;
+}
+
+.brunswick{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.brunswick img{
+    width: 50%;
+}
+.brunswick p{
+    width: 80%;
+    margin: 20px auto;
+}
+.pd-icon{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pd-icon img{
+    width: 12.5%;
 }
 
 @media(max-width:821px) {
@@ -2030,10 +2068,22 @@ footer .line{
     .benefit-card-text{
         padding-left: 15px;
     }
+    .brunswick{
+        flex-direction: column;
+    }
+    .brunswick img{
+        width: 100%;
+    }
+    .brunswick2{
+        margin-top: -50px;
+    }
 }
 @media(max-width:426px) {
     .SOPlus.banner .pdBox{
         max-width: 87%;
+    }
+    .pd-icon img{
+        width: 25%;
     }
 }  
 
