@@ -1312,6 +1312,7 @@ footer .line{
     display: flex;
     justify-content: space-around;
     margin: 50px auto;
+    flex-wrap: wrap;
 }
 .busi-adv .adv-part{
     width: 30%;
@@ -1870,13 +1871,14 @@ footer .line{
 .pd-title{
     text-align: center;
     margin: 50px auto 15px;
+    width: 100%;
 }
 .pd-title .f-born{
     font-size: 20px;
     margin-top: -3px;
     font-weight: 300;
     position: relative;
-    top: -12px;
+    top: -23px;
 }
 
 
@@ -1885,6 +1887,9 @@ footer .line{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+.ingredien1 .textbox h2{
+    text-align: left;
 }
 .ingredien1 .ingredien1-textbox{
     width: 60%;
@@ -2067,7 +2072,7 @@ footer .line{
         text-align: center;
     }
     .ingredien2 li{
-        width: 62%;
+        width: 70%;
     }
     .sp-benefit .benefit-card li{
         display: flex;
@@ -2100,6 +2105,12 @@ footer .line{
     .banner-text-ph .banner-text h1 span{
         display: block;
     }
+    .ingredien1 .textbox h2{
+        text-align: center;
+    }
+    .pd-title .f-born{
+        top: -12px;
+    }
 }
 @media(max-width:426px) {
     .SOPlus.banner .pdBox{
@@ -2122,7 +2133,9 @@ footer .line{
     background-position: center;
     background-attachment: fixed;
 }
-
+.SOCollagen .f-born,.Collagen-ct .f-born,.Collagen-ct .pd-title .f-born{
+    color: #DC616E
+}
 
 .SOCollagen.banner .banner-text{
     color: #242424;
@@ -2165,8 +2178,9 @@ footer .line{
     width: 100%;
     height: 442px;
     justify-content: start;
-    margin-top: 12px;
+    margin: 80px auto 80px;
     border-radius: 10px;
+    background-attachment: fixed;
 }
 .Collagen-ct .part1-textbox{
     position: relative;
@@ -2215,7 +2229,14 @@ footer .line{
     margin-top: 300px;
 }
 
+.Collagen-ct .ingredien1 h2,.Collagen-ct .ingredien2 h2{
+    color: #ff8c7f;
+}
 
+.SOCollagen .banner-text h2{
+    color: white;
+    font-size: 56px;
+}
 
 @media(max-width:1040px) {
     .SOCollagen.banner .banner-text{
@@ -2261,13 +2282,14 @@ footer .line{
         width: 56%;
     }
     .Collagen-ct .part1{
-        height: 327px;
+        height: 360px;
+        margin: 12px auto 19px;
     }
     .Collagen-ct .part1-textbox{
         padding: 20px;
         width: 90%;
         background-color: transparent;
-        top: 32px;
+        top: 83px;
     }
     .Collagen-ct .part1-textbox h2{
         font-size: 28px;
@@ -2293,6 +2315,9 @@ footer .line{
     }
     .c-bg3{
         bottom: -130px;
+    }
+    .Collagen-ct .ingredien1 .ingredien1-imgbox{
+        width: 66%;
     }
 }
 
