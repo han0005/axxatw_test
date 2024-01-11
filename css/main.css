@@ -2226,7 +2226,7 @@ footer .line{
     z-index: -1;
 }
 .Collagen-ct .pd-title{
-    margin-top: 300px;
+    margin-top: 50px;
 }
 
 .Collagen-ct .ingredien1 h2,.Collagen-ct .ingredien2 h2{
@@ -2236,6 +2236,33 @@ footer .line{
 .SOCollagen .banner-text h2{
     color: white;
     font-size: 56px;
+}
+
+.Collagen-ct .sp-benefit{
+    background-image: url(../img/pd/so_collagen/成分BG.png);
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 80px;
+}
+.ingredien1 .pd-title{
+    margin-top: 300px;
+}
+.brunswick img{
+    display: none;
+}
+
+.Collagen-ct .benefit-card li{
+    border: 1px solid rgb(255 229 229);
+}
+
+.Collagen-ct .benefit-card li .benefit-card-text h2{
+    color: #ff8c7f;
+}
+.Collagen-ct .brunswick .pd-title{
+    margin-top: 80px;
+}
+.Collagen-ct .pd-icon{
+    margin-bottom: 50px;
 }
 
 @media(max-width:1040px) {
@@ -2319,17 +2346,15 @@ footer .line{
     .Collagen-ct .ingredien1 .ingredien1-imgbox{
         width: 66%;
     }
-    .SOCollagen.banner::before{
-        content: ' ';
-        position: fixed;
-        z-index: -1;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: url(../img/pd/so_collagen/banner底圖.jpg) center 0 no-repeat;
-        background-size: cover;
-      }
+    .Collagen-ct .pd-title{
+        margin-top: 150px;
+    }
+    .sp-benefit .pd-title{
+        margin-top: 50px;
+    }
+    .Collagen-ct .part2 .part2-text h1,.Collagen-ct .part3 h1{
+        font-size: 26px;
+    }
 }
 
 @media(max-width:426px) {
