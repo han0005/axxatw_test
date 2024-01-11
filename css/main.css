@@ -2319,6 +2319,19 @@ footer .line{
     .Collagen-ct .ingredien1 .ingredien1-imgbox{
         width: 66%;
     }
+
+    .Collagen-ct .part1::before{
+        height: 500px;
+        content: '';
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-image: url(../img/pd/so_collagen/banner底圖.jpg) center 0 no-repeat;
+        background-size: cover;
+    }
 }
 
 @media(max-width:426px) {
