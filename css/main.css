@@ -85,8 +85,9 @@ h1{
 
 p{
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.8;
     letter-spacing: 1px;
+    color: #636363;
 }
 .so{
     font-family: 'lexend';
@@ -110,7 +111,8 @@ p{
     }
     p{
         font-size: 16px;
-        line-height: 1.5;
+        line-height: 1.8;
+        color: #636363;
     }
 }
 
@@ -121,6 +123,7 @@ p{
     margin: 0 auto;
     font-weight: 500;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .wrap{
@@ -2365,6 +2368,95 @@ footer .line{
     }
     .SOCollagen.banner .pdBox{
         max-width: 80%;
+    }
+}
+
+/*----------------SO Biotic----------------*/
+.SOBiotic.banner{
+    width: 100%;
+    height: 573.7px;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    background-image: url('../img/pd/so_biotic/源益banner背景圖.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.SOBiotic .f-born,.Collagen-ct .f-born,.Collagen-ct .pd-title .f-born{
+    color: #939393;
+    font-weight: 600;
+}
+
+.SOBiotic.banner .banner-text{
+    color: #242424;
+    width: 50%;
+    padding: 30px 45px;
+    position: absolute;
+    left: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.SOBiotic.banner .banner-text h2{
+    font-size: 58px;
+    font-weight: 800;
+    color: white;
+}
+.pdBox{
+    position: absolute;
+    right: 5%;
+    top: 150px;
+    width: 100%;
+}
+
+.SOBiotic.banner .pdBox{
+    max-width: 32%;
+}
+.biotic-info{
+    max-width: 1200px;
+    margin: auto;
+}
+@media(max-width:745px) {
+    .SOBiotic.banner{
+        background-image: url(../img/pd/so_biotic/源益banner背景ph-05.jpg);
+    }
+    .SOBiotic.banner{
+        flex-direction: column;
+        margin-bottom: 36px;
+        height: 380px;
+    }
+    .SOBiotic.banner .banner-text h1 .f-born{
+        margin-top: 0px;
+        position: relative;
+        top: -12px;
+        font-size: 20px;
+    }
+    
+    .SOBiotic.banner .banner-text{
+        color: #fff;
+        width: 100%;
+        padding: 30px 45px;
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: translateY(0);
+        text-align: center;
+    }   
+    .SOBiotic.banner .banner-text h2{
+        display: none;
+    }
+    
+    .SOBiotic.banner .pdBox{
+        max-width: 60%;
+    }
+    .SOBiotic .pdBox{
+        bottom: -69px;
+        right: 50%;
+        transform: translateX(55%);
+    }
+    .biotic-banner-text{
+        padding: 0 40px 40px;
     }
 }
 
