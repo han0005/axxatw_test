@@ -56,6 +56,11 @@ img{
     box-sizing: border-box;
 }
 
+.fa-sort-down{
+    position: relative;
+    top: -5px;
+    margin-left: 5px;
+}
 /*------------------------以上為CSS reset-------------------------*/
 @font-face {
     font-family: 'bornready';
@@ -145,14 +150,18 @@ p{
     z-index: 2;
     top: 0;
     bottom: 0;
-    background-color: #E5C45D;
+    background-color: #ffffff;
     transform: translateX(-100%);
-    transition-duration: .3s;
+    transition-duration: .5s;
     display: none;
-    overscroll-behavior: contain;x
+    overscroll-behavior: none;
+    overflow-y: scroll;
+    height: 100dvh;
+    opacity: 0;
 }
 
 .aside.aside-active{
+    opacity: 1;
     transform:translateX(0);
     margin-right:-23.5px;
 }
@@ -197,7 +206,7 @@ p{
     margin-top: 95px;
 }
 .aside ul:nth-child(1){
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 
@@ -207,12 +216,12 @@ p{
     text-align: center;
     padding: 25px;
     font-size: 20px;
-    color: #fff;
+    color: #939393;
     font-weight: bolder;
+    transition-duration: .2s;
 }
 
 .aside a:hover{
-    background-color: white;
     color: #E5C45D;
 }
 
@@ -220,8 +229,9 @@ p{
     background-color: #E5C45D;
     color: white;
     border-radius: 30px;
-    line-height: 26px;
+    line-height: 36px;
     margin-top: 10px;
+    width: 100%;
 }
 
 .menu li .xoffice:hover{
@@ -239,7 +249,7 @@ p{
     display: none;
 }
 .aside .about-a .down-menu li{
-    background-color: #d9ab1b;
+    background-color: #fff4df;
 }
 
 
@@ -260,7 +270,7 @@ p{
     .pd-menu li{
         display: inline-block;
         width: 100%;
-        background-color: #d9ab1b;
+        background-color: #fff4df;
     }
     .pd-menu li a{
         padding: 5px;
@@ -320,6 +330,7 @@ p{
     margin-right: 15px;
     padding-left: 10px;
     padding-right: 10px;
+    line-height: 57px;
 }
 
 .menu li a:hover{
@@ -342,7 +353,7 @@ p{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    background-color: #E5C45D;
+    background-color: #fff4df;
     padding: 0px 50px;
     display: none;
     z-index: 1;
@@ -354,6 +365,7 @@ p{
 
 .about-a:hover>.down-menu{
     display: block;
+    transition-duration: .5s;
 }
 
 .pd-a:hover>.pd-menu{
@@ -576,7 +588,6 @@ p{
         flex-direction: column-reverse;
         margin-bottom: 0px;
         margin-top: 260px;
-        background-color: #f5f5f5;
     }
     .part2 .right{
         width: 85%;
@@ -958,7 +969,7 @@ footer .line{
     position: fixed;
     bottom: 50px;
     right: 10px;
-    z-index: 99;
+    z-index: 1;
 }
 
 .gotop a{
@@ -969,6 +980,14 @@ footer .line{
     border-radius: 50%;
     background-image: url(img/icon/未命名-2.png);
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gotop a .fa-chevron-up{
+    font-size: 38px;
+    color: #fff;
 }
 
 /*swiper*/
@@ -1386,8 +1405,8 @@ footer .line{
     }
     .banner-text-ph{
         display: block;
-        padding: 40px;
         width: 100%;
+        margin-bottom: 35px;
     }
 
     .banner-text .f-born{
@@ -1466,12 +1485,14 @@ footer .line{
     margin-bottom: 10px;
 }
 
-.contact-part h2, .axxaw-info-l>h2:nth-child(1){
+.contact-part h2, .axxatw-info>h2{
     font-size: 23px;
     font-weight: bold;
     margin: 5px auto 10px;
     border-bottom: 1px solid #E5C45D;
     padding-bottom: 3px;
+    width: 100%;
+    color: #535353;
 }
 .contact-part .f-born{
     margin-left: 10px;
@@ -1509,27 +1530,34 @@ footer .line{
     color: #fff;
 }
 .axxatw-info{
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 90%;
+    margin-bottom: 30px;
 }
-.axxatw-info .axxaw-info-l h2{
+.axxatw-info h2{
     font-weight: 700;
+    color: #535353;
 }
-.axxatw-info .axxaw-info-l p{
-    margin-bottom: 10px;
+.axxatw-info p{
+    margin-bottom: 20px;
 }
-.axxaw-info-l{
-    width: 55%;
-}
-.axxaw-info-l{
+
+.axxatw-info-wrap{
+    width: 100%;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
-.axxaw-info-r{
-    width: 40%;   
+.axxatw-info-wrap .info-part1,.axxatw-info-wrap .info-part2{
+    width: 50%;
+}
+.info-map{
+    width: 100%;   
     height: 350px;
+    margin-bottom: 30px;
 }
 
 .add-line{
@@ -1593,19 +1621,32 @@ footer .line{
         width: 80%;
     }
     .add-line img{
-        width: 100px;
+        width: 32%;
     }
-    .axxaw-info-l, .axxaw-info-r{
+    .axxatw-info-wrap{
         width: 90%;
+        flex-direction: column-reverse;
     }
+
     .axxatw-info{
         justify-content: center;
         padding: 0;
     }
-    .axxaw-info-l{
+    .axxatw-info-wrap{
         padding: 0;
         margin-bottom: 30px;
     }
+    .axxatw-info-wrap .info-part1,.axxatw-info-wrap .info-part2{
+        width: 100%;
+    }
+    .add-line{
+        width: 100%;
+    }
+    .world-contact-title h1 span{
+        display: block;
+        margin: auto;
+    }
+
 }
 
 /*--------------------team--------------------*/
@@ -2399,9 +2440,10 @@ footer .line{
     transform: translateY(-50%);
 }
 .SOBiotic.banner .banner-text h2{
-    font-size: 58px;
+    font-size: 40px;
     font-weight: 800;
-    color: white;
+    color: #7cbda3;
+    line-height: 1.2;
 }
 .pdBox{
     position: absolute;
@@ -2413,9 +2455,12 @@ footer .line{
 .SOBiotic.banner .pdBox{
     max-width: 32%;
 }
-.biotic-info{
+.biotic-info-pc{
     max-width: 1200px;
     margin: auto;
+}
+.biotic-info-ph{
+    display: none;
 }
 @media(max-width:745px) {
     .SOBiotic.banner{
@@ -2457,6 +2502,12 @@ footer .line{
     }
     .biotic-banner-text{
         padding: 0 40px 40px;
+    }
+    .biotic-info-pc{
+        display: none;
+    }
+    .biotic-info-ph{
+        display: block;
     }
 }
 
