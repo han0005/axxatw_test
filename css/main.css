@@ -92,7 +92,7 @@ p{
     font-size: 18px;
     line-height: 1.8;
     letter-spacing: 1px;
-    color: #636363;
+    color: #656565;
 }
 .so{
     font-family: 'lexend';
@@ -100,28 +100,6 @@ p{
     font-weight: bolder;
     font-size: 40px;
 }
-
-@media(max-width:745px) {
-    h1{
-        line-height: 1;
-        font-size: 32px;
-        line-height: 1.2em;
-    }
-
-    h1 span{
-        margin-bottom: 5px;
-        display: inline-block;
-        font-size: 30px;
-        margin-top: 12px;
-    }
-    p{
-        font-size: 16px;
-        line-height: 1.8;
-        color: #636363;
-    }
-}
-
-
 
 .container{
     max-width: 100%;
@@ -139,7 +117,35 @@ p{
 .born-font{
     font-family: 'bornready';
 }
+.right-announce{
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    padding: 3px;
+    font-family: 'lexend';
+}
+@media(max-width:745px) {
+    h1{
+        line-height: 1;
+        font-size: 32px;
+        line-height: 1.2em;
+    }
 
+    h1 span{
+        margin-bottom: 5px;
+        display: inline-block;
+        font-size: 30px;
+        margin-top: 12px;
+    }
+    p{
+        font-size: 15px;
+        line-height: 1.8;
+        color: #2d2c2c;
+    }
+    .right-announce{
+        font-size: 9px;
+        margin-top: -3px;
+    }
+}
 /*--------------------以下為aside------------------------*/
 .ph-menu-btn{
     display: none;
@@ -821,14 +827,14 @@ p{
 /*---------------footer area------------------*/
 
 footer{
-    background-color: rgb(255, 248, 236);
-    height: 400px;
+    background-color: #f4f4f4;
+    height: auto;
 }
 
 .footer-area{
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 .footer-top{
@@ -838,40 +844,49 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-logo{
-    width: 35%;
-    text-align: center;
+    width: 20%;
+}
+.footer-logo img{
+    width: 120%;
 }
 
 .footer-area ul{
     display: flex;
     justify-content: space-between;
-    width: 65%;
+    width: 75%;
+    flex-wrap: wrap;
 }
 
 .footer-area li{
-    width: 25%;
+    width: 15%;
 }
 
 .footer-area h2{
+    letter-spacing: 0.8px;
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
     padding-bottom: 5px;
     border-bottom: 1px solid #ffcb19;
+    color: #2c2c2c;
+    width: 80%;
 }
 
 .footer-links a{
     padding: 5px 0px;
     display: block;
     text-decoration: none;
-    color: #3E3A39;
+    color: #636363;
+    font-size: 15px;
 }
 
 .footer-social{
-    text-align: center;
+    text-align: right;
+    width: 60%;
 }
 
 .footer-social img{
@@ -890,16 +905,54 @@ footer{
 
 .footer-social p{
     margin-top: 5px;
+    color: #8b8b8b;
 }
 
 footer .line{
-    background-color: #fff;
-    height: 1px;
-    width: 70%;
+    background-color: #dddddd;
+    height: 0.5px;
+    width: 95%;
     margin: 20px auto;
 }
 
-
+.footer-down .Related-agencies{
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+}
+.footer-down .Related-agencies a:nth-child(1){
+    width: 46%;
+}
+.footer-down .Related-agencies a{
+    width: 27%;
+    height: fit-content;
+}
+.footer-contact{
+    display: flex;
+    width: 100%;
+}
+.footer-contact-left{
+    width: 50%;
+    padding-left: 25px;
+}
+.footer-social{
+    width: 50%;
+}
+.footer-contact p{
+    font-size: 15px;
+}
+.footer-area-bottom{
+    width: 100%;
+    background-color: #212121;
+}
+.footer-area-bottom p{
+    text-align: center;
+}
+.Related-agencies iframe{
+    width: 100%;
+    height: 70px;
+    margin-top: 10px;
+}
 @media(max-width:745px) {
     footer{
         height: 100%;
@@ -907,14 +960,12 @@ footer .line{
 
     .footer-area{
         flex-direction: column;
+        background-color: #f4f4f4;
     }
 
     .footer-logo{
         width: 75%;
-    }
-
-    .footer-down{
-        flex-direction: column;
+        margin-bottom: 25px;
     }
 
     .footer-area ul{
@@ -922,19 +973,18 @@ footer .line{
     }
 
     .footer-area ul li{
-        width: 100%;
+        width: 42.5%;
     }
 
     .footer-down>li{
-        border-bottom: 1px solid #e9e9e9b0;
-        padding-bottom: 10px;
+        padding-bottom: 32px;
     }
 
     .footer-area h2{
         margin-top: 10px;
+        font-size: 16px;
     }
 
-    
     .footer-social a{
         width: 45px;
     }
@@ -942,7 +992,7 @@ footer .line{
     .footer-social img{
         width: 40px;
     }
-
+/*
     .footer-links{
         display: none;
     }
@@ -951,13 +1001,43 @@ footer .line{
         display: block;
         transition: 1s;
     }
-
+*/
     .footer-down h2{
-        color: #3E3A39;
+        color: #2c2c2c;
+        font-weight: 600;
     }
 
     .footer-down h2.hv{
         color: #E5C45D;
+    }
+
+    .footer-contact{
+        flex-wrap: wrap;
+    }
+    .footer-contact-left, .footer-social{
+        width: 100%;
+        padding: 0;
+    }
+    .footer-contact-left p span{
+        display: block;
+    }
+    .footer-down .Related-agencies{
+        width: 100%;
+        justify-content: center;
+    }
+    .footer-down .Related-agencies a:nth-child(1){
+        width: 40%;
+    }
+    .footer-down .Related-agencies a{
+        width: 23%;
+    }
+    .Related-agencies iframe{
+        height: 70px;
+        margin-top: 30px;
+    }
+    .footer-social{
+        margin-top: 15px;
+        text-align: start;
     }
 }
 
@@ -1405,9 +1485,11 @@ footer .line{
     }
     .banner-text-ph{
         display: block;
-        width: 100%;
+        width: 80%;
         margin-bottom: 35px;
+        margin: 0px auto 50px;
     }
+ 
 
     .banner-text .f-born{
         font-size: 22px;
@@ -1885,7 +1967,7 @@ footer .line{
 }
 
 .SOPlus.banner .pdBox{
-    max-width: 50%;
+    max-width: 40%;
 }
 
 .sp-part1{
@@ -2500,9 +2582,6 @@ footer .line{
         right: 50%;
         transform: translateX(55%);
     }
-    .biotic-banner-text{
-        padding: 0 40px 40px;
-    }
     .biotic-info-pc{
         display: none;
     }
@@ -2511,7 +2590,6 @@ footer .line{
         text-align: center;
     }
 }
-
 
 /*---------------tech-----------------------*/
 .tech.banner{
