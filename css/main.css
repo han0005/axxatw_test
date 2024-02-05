@@ -1018,6 +1018,7 @@ footer .line{
     .footer-contact-left, .footer-social{
         width: 100%;
         padding: 0;
+        text-align: center;
     }
     .footer-contact-left p span{
         display: block;
@@ -1038,10 +1039,13 @@ footer .line{
     }
     .footer-social{
         margin-top: 15px;
-        text-align: start;
+        text-align: center;
     }
     .footer-logo img{
         width: 80%;
+    }
+    .Related-agencies iframe{
+        width: 300px;
     }
 }
 
