@@ -142,7 +142,7 @@ p{
         color: #2d2c2c;
     }
     .right-announce{
-        font-size: 9px;
+        font-size: 11px;
         margin-top: -3px;
     }
 }
@@ -966,6 +966,7 @@ footer .line{
     .footer-logo{
         width: 75%;
         margin-bottom: 25px;
+        text-align: center;
     }
 
     .footer-area ul{
@@ -1038,6 +1039,9 @@ footer .line{
     .footer-social{
         margin-top: 15px;
         text-align: start;
+    }
+    .footer-logo img{
+        width: 80%;
     }
 }
 
