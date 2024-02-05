@@ -148,7 +148,29 @@
                         </div>
                     </div>
                     <div class="info-part2">
-                        <img src="./img/contact/DSC08040.JPG" alt="">
+                        <div class="swiper index-sw">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="./img/contact/大廳櫃台.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/contact/DSC08040.JPG"></div>
+                            <div class="swiper-slide"><img src="./img/contact/DSC08060.JPG"></div>
+                            <div class="swiper-slide"><img src="./img/contact/S__13631506.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/contact/S__13631501.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/contact/DSC08065.JPG"></div>
+                            <div class="swiper-slide"><img src="./img/contact/DSC08061.JPG"></div>
+                            <div class="swiper-slide"><img src="./img/contact/DSC08049.JPG"></div>
+                            </div>
+                            <!-- If we need pagination -->
+
+                        
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        
+                            <!-- If we need scrollbar -->
+                            <div class="swiper-scrollbar"></div>
+                        </div>
                     </div>
                     
                 </div> 
@@ -248,6 +270,33 @@
         <div class="gotop"><a href="#"><i class="fa-solid fa-chevron-up"></i></a></div>
     
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
-</body>
+        <script>        
+            var mySwiper = new Swiper ('.swiper', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+            tag: Swiper,
+            
+            // 如果需要分页器
+            pagination: {
+            el: '.swiper-pagination',
+            },
+            
+            // 如果需要前进后退按钮
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+    
+            controller: {
+            inverse: true,
+            },
+        })        
+      </script>
+      <script>
+            function imgSlider(anything){
+                document.querySelector('.show-Pd').src=anything
+            }
+      </script>
+    </body>
 </html>    
     

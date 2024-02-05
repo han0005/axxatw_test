@@ -123,6 +123,9 @@ p{
     padding: 3px;
     font-family: 'lexend';
 }
+.swiper-button-next, .swiper-button-prev{
+    color: white;
+}
 @media(max-width:745px) {
     h1{
         line-height: 1;
@@ -382,7 +385,7 @@ p{
     font-size: 22px;
     position: relative;
     top: -25px;
-    color: white;
+    color: #6b6b6b;
     font-weight: 500;
     font-family: "bornready";
 }
@@ -1493,9 +1496,9 @@ footer .line{
     }
     .banner-text-ph{
         display: block;
-        width: 80%;
+        width: 100%;
         margin-bottom: 35px;
-        margin: 0px auto 50px;
+        margin: 10px auto 30px;
     }
  
 
@@ -1711,7 +1714,7 @@ footer .line{
         width: 80%;
     }
     .add-line img{
-        width: 32%;
+        width: 30%;
     }
     .axxatw-info-wrap{
         width: 90%;
