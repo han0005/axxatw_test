@@ -1512,9 +1512,10 @@ footer .line{
     }
     .banner-text-ph{
         display: block;
-        width: 100%;
+        width: 85%;
         margin-bottom: 35px;
         margin: 10px auto 30px;
+
     }
  
 
@@ -1578,15 +1579,14 @@ footer .line{
     line-height: 1.2;
 }
 
-.contact-banner img{
-    display: none;
-}
+
 
 .world-contact{
     display: flex;
     justify-content: space-around;
     margin: 50px auto;
     flex-wrap: wrap;
+    max-width: 1200px;
 }
 
 
@@ -1762,6 +1762,9 @@ footer .line{
     }
     .axxatw-info-wrap .info-part1{
         padding-left: 0px;
+    }
+    .contact-banner img{
+        display: none;
     }
 }
 
