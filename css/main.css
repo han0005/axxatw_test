@@ -56,7 +56,7 @@ img{
     height: auto;
 }
 
-*{
+*, *::before, *::after{
     box-sizing: border-box;
 }
 
@@ -2878,17 +2878,17 @@ footer .line{
 .accordion-button{
     position: relative;
     float: right;
-    width: 30px;
+    width: 23px;
 }
 
 .faq-list{
-    opacity: 0;
+    display: none;
     height: 0px;
     
 }
 .faq-list1.open, .faq-list2.open, .faq-list3.open{
     cursor: pointer;
-    visibility: visible;
+    display: block;
     opacity: 1;
     height: auto;
     transition: 1s;
