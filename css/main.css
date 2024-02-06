@@ -273,6 +273,10 @@ p{
     overflow-y: auto;
 }
 
+.menu ul li .fa-sort-down{
+    display: none;
+}
+
 @media(max-width:745px) {
     .aside{
         display: block;
@@ -302,6 +306,9 @@ p{
     }
     .ph-menu-btn{
         display:inline-block;
+    }
+    .menu ul li .fa-sort-down{
+        display: block;
     }
 }
 
@@ -2805,6 +2812,17 @@ footer .line{
     }
 }
 
+/*-------------faq part-------------------*/
+.faq-banner{
+    height: 520px;
+    max-width: 100%;
+    background-image: url(../img/faq/faq-banner-pc.jpg);
+    background-size: cover;
+    background-position: left;
+}
+.faq-banner-ph{
+    display: none;
+}
 .faq-container{
     max-width: 1200px;
     margin: 12px auto;
@@ -2812,7 +2830,7 @@ footer .line{
 }
 
 .faq-container h1{
-    font-size: 46px;
+    font-size: 36px;
     font-weight: 600;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -2850,7 +2868,7 @@ footer .line{
 }
 
 .accordion-button::after{
-    content: url(../img/icon/external-chevron-arrows-tanah-basah-basic-outline-tanah-basah-4.png);
+    content: url(../img/icon/external-chevron-arrows-tanah-basah-basic-outline-tanah-basah-5.png);
     top: 50%;
     left: 0;
     width: 100%;
@@ -2864,24 +2882,38 @@ footer .line{
 }
 
 .faq-list{
-    display: none;
+    opacity: 0;
+    height: 0px;
+    
 }
-.faq-list1.open{
+.faq-list1.open, .faq-list2.open, .faq-list3.open{
     cursor: pointer;
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
     transition: 1s;
 }
-.accordion-button .active:after{
-    transform: rotate(-180deg);
-    background-color: #22BA4F;
+
+.accordion-button.active{
+    cursor: pointer;
+    content: url(../img/icon/collapse-arrow--v1.png);
 }
+
+
+
 
 
 @media only screen and (min-width: 0px) and (max-width: 767px){
+    .faq-banner{
+        background-image: url(../img/faq/faq-banner-ph.jpg);
+        background-position: center;
+        height: 280px;
+    }
     .faq-container {max-width: 860px;
     }
     .faq-container .section-title{
         padding: 18px 0;
+        cursor: pointer;
     }
     .accordion-button{
         position: relative;
@@ -2893,7 +2925,10 @@ footer .line{
         margin: 8px 22px 0 12px;
         top: -8px;
     }
-    .faq-title .accordion-button{
-
+    .faq-banner-pc{
+        display: none;
+    }
+    .faq-banner-ph{
+        display: block;
     }
 }

@@ -28,6 +28,16 @@ $(document).ready(function () {
         $(this).parent().find('.faq-list1').toggleClass('open');
         $(this).find('.accordion-button').toggleClass('active');
     });
+    $('.faq-section2').click(function (e) { 
+        e.preventDefault();
+        $(this).parent().find('.faq-list2').toggleClass('open');
+        $(this).find('.accordion-button').toggleClass('active');
+    });
+    $('.faq-section3').click(function (e) { 
+        e.preventDefault();
+        $(this).parent().find('.faq-list3').toggleClass('open');
+        $(this).find('.accordion-button').toggleClass('active');
+    });
 });
 
 
