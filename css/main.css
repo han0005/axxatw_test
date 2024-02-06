@@ -30,6 +30,10 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.571;
+    color: #484848;
 }
 ol, ul {
 	list-style: none;
@@ -1087,6 +1091,11 @@ footer .line{
     width: 334px;
     height: 223px;
   }
+.info-part2 .swiper{
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 @media(max-width:745px) {
     .swiper{
@@ -1643,9 +1652,14 @@ footer .line{
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
 .axxatw-info-wrap .info-part1,.axxatw-info-wrap .info-part2{
     width: 50%;
+}
+
+.axxatw-info-wrap .info-part1{
+    padding-left: 25px;
 }
 .info-map{
     width: 100%;   
@@ -1739,7 +1753,9 @@ footer .line{
         display: block;
         margin: auto;
     }
-
+    .axxatw-info-wrap .info-part1{
+        padding-left: 0px;
+    }
 }
 
 /*--------------------team--------------------*/
@@ -2786,5 +2802,98 @@ footer .line{
     }
     .tech-content ul li .tech-content-img{
         text-align: center;
+    }
+}
+
+.faq-container{
+    max-width: 1200px;
+    margin: 12px auto;
+    padding: 0 20px;
+}
+
+.faq-container h1{
+    font-size: 46px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #969696;
+}
+
+.faq-container .section-title{
+    padding: 18px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.faq-container .faq-list{
+    width: 100%;
+    padding-left: 30px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.faq-container .faq-title{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.faq-container .faq-answer{
+    padding: 12px 20px 24px;
+    color: #515151;
+}
+
+.faq-container .faq-list li{
+    padding: 12px 0 12px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.faq-container .faq-list li:last-child {
+    border-bottom: 0;
+}
+
+.accordion-button::after{
+    content: url(../img/icon/external-chevron-arrows-tanah-basah-basic-outline-tanah-basah-4.png);
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    margin-top: -2px;
+}
+.accordion-button{
+    position: relative;
+    float: right;
+    width: 30px;
+}
+
+.faq-list{
+    display: none;
+}
+.faq-list1.open{
+    cursor: pointer;
+    display: block;
+    transition: 1s;
+}
+.accordion-button .active:after{
+    transform: rotate(-180deg);
+    background-color: #22BA4F;
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    .faq-container {max-width: 860px;
+    }
+    .faq-container .section-title{
+        padding: 18px 0;
+    }
+    .accordion-button{
+        position: relative;
+        float: left;
+    }
+    .accordion-button.ac-button-header{
+        width: 16px;
+        height: 16px;
+        margin: 8px 22px 0 12px;
+        top: -8px;
+    }
+    .faq-title .accordion-button{
+
     }
 }

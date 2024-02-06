@@ -22,6 +22,12 @@ $(document).ready(function () {
         event.preventDefault();
         $('html,body').animate({scrollTop:0},1000);
     })
+/*faq toggle part*/
+    $('.faq-section1').click(function (e) { 
+        e.preventDefault();
+        $(this).parent().find('.faq-list1').toggleClass('open');
+        $(this).find('.accordion-button').toggleClass('active');
+    });
 });
 
 
