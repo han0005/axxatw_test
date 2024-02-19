@@ -1862,17 +1862,23 @@ footer .line{
 
 /*--------------------team--------------------*/
 .ourteam-banner{
-    height: 760px;
-    background-image: url(../img/axxa+group.jpg);
+    height: 686px;
+    background-image: url(../img/axxa+group2.jpg);
     background-size: cover;
     background-position: bottom;
+    position: relative;
 }
 .ourteam-banner img{
     display: none;
 }
 
 .team-title{
-    padding-top: 75px;
+    position: absolute;
+    bottom: 52px;
+    left: 50%;
+    transform: translate(-50%);
+    
+    padding-top: 60px;
     text-align: center;
 }
 .team-title h1{
@@ -1882,7 +1888,7 @@ footer .line{
 .team-title .f-born{
     font-size: 32px;
     text-align: center;
-    margin-top: 12px;
+    margin-top: -9px;
 }
 
 .team3{
@@ -1924,7 +1930,7 @@ footer .line{
 .frankee{
     position: relative;
     z-index: 1;
-    width: 80%;
+    width: 58%;
 }
 
 .team2 .right .sh-bg{
@@ -2016,12 +2022,7 @@ footer .line{
         flex-direction: column;
         margin-top: 50px;
     }
-    .team1 .left .fk-bg{
-        top: 15px;
-        left: 45px;
-        width: 16%;
-        z-index: 1;
-    }
+
     .team1 .part h1 span,.team2 .part h1 span{
         font-size: 25px;
     }
@@ -2052,11 +2053,19 @@ footer .line{
         background-repeat: no-repeat;
         background-position: center;
     }
+    .team-title{
+        padding-top: 22px;
+    }
+    
     .team-title .f-born{
         font-size: 20px;
+        margin-top: -9px;
     }
     .frankee{
         width: 60%;
+    }
+    .ourteam-banner{
+        background-image: url('../img/axxa+group.jpg');
     }
 }
 @media(max-width:426px) {
