@@ -65,6 +65,10 @@ img{
     top: -5px;
     margin-left: 5px;
 }
+.container-fluid{
+    width: 100vw;
+    position: relative;
+}
 /*------------------------以上為CSS reset-------------------------*/
 @font-face {
     font-family: 'bornready';
@@ -141,7 +145,7 @@ p{
         margin-bottom: 5px;
         display: inline-block;
         font-size: 30px;
-        margin-top: 12px;
+        margin-top: -33px;
     }
     p{
         font-size: 15px;
@@ -318,7 +322,7 @@ p{
 }
 
 .logo{
-    width: 15%;
+    width: 10%;
     margin-left: 5%;
 }
 
@@ -448,19 +452,39 @@ p{
 
 .index-banner1{
     height: 682px;
-    background-image: url(../img/index/天雨台灣首頁-03.jpg);
+    background-image: url(../img/index/首頁banner-pc.png);
     background-size: cover;
     background-position: left;
     position: relative;
 }
 .index-banner1 h1{
     font-family: 'bornready';
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.banner-1-text .so{
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.banner-1-text p{
+    color: white;
+}
+
+.banner-1-text{
     position: absolute;
-    right: 40%;
-    bottom: 50%;
-    transform: translateY(-50%);
-    color: #969696;
-    font-weight: 400;
+    left: 15%;
+    bottom: 40%;
+    width: 50%;
+}
+
+.index-banner1 img{
+    position: absolute;
+    right: 0;
+    width: 46%;
+    max-width: 520px;
 }
 
 .white-part{
@@ -473,9 +497,35 @@ p{
     left: 0;
     right: 0;
 }
+
+.index-curve{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.index-curve img{
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    top: -267px;
+
+}
+@media(max-width:1230px){
+    .index-banner1{
+        height: 682px;
+        background-image: url(../img/index/首頁banner-pc.png);
+        background-size: cover;
+        background-position: left;
+        position: relative;
+    }
+}
 @media(max-width:1200px) {
     .index-banner1 h1{
         right: 32%;
+    }
+    .banner-1-text{
+        left: 8%;
+        width: 54%;
     }
 }
 @media(max-width:900px) {
@@ -489,7 +539,7 @@ p{
         height: 586px;
         background-image: url(../img/首頁banner\ mobile.jpg);
     }
-    .index-banner1 h1{
+    .index-banner1 .banner-1-text,.index-curve,.index-banner1 img{
         display: none;
     }
 }   
@@ -572,6 +622,10 @@ p{
     .part1 .right img{
         width: 60%;
     }
+
+    .part h1 span{
+        font-size: 24px;
+    }
 }
 
 /*--------------以上為part1-------------------*/
@@ -620,7 +674,7 @@ p{
 
 /*---------------------------------*/
 .part3{
-    margin-top: 25px;
+    margin-top: 150px;
     margin-bottom: 50px;
     padding: 20px;
 }
@@ -653,6 +707,7 @@ p{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: 150px;
 }
 
 .part3 ul li{
@@ -760,9 +815,8 @@ p{
     flex-wrap: wrap;
     align-items: center;
 }
-.index-wrap .part3 .oil img{
+.part3 .oil img{
     position: absolute;
-    height: 500px;
     width: 100%;
     left: 0;
     right: 0;
@@ -771,13 +825,15 @@ p{
     object-fit: cover;
 }
 
-.index-wrap .part3 .part3_text{
+.index-wrap.container-fluid .part3 .part3_text{
     padding-top: 250px;
-    padding: 150px 5px 70px 30px;
-    width: 65%;
+    padding: 3% 20px 51px 20px;
+    width: 50%;
 }
-.index-wrap .part3 .part3-img{
-    width: 35%;
+.index-wrap.container-fluid .part3 .part3-img{
+    width: 50%;
+    position: relative;
+    top: -20px;
 }
 
 .index-wrap .part .index-btn{
@@ -799,7 +855,7 @@ p{
     .index-wrap .part h1{
         font-size: 32px;
     }
-    .index-wrap .part3 .oil img{
+    .part3 .oil img{
         object-fit: contain;
     }
     .index-wrap .part1,.index-wrap .part2,.index-wrap .part3-team{
@@ -820,7 +876,7 @@ p{
     }
     .index-wrap .part2{
         flex-direction: column-reverse;
-        margin-top: 386px;
+        margin-top: 272px;
     }
     .index-wrap .part3-team{
         flex-direction: column-reverse;
@@ -831,10 +887,29 @@ p{
     .index-wrap .part3 .part3-img{
         width: 60%;
         position: relative;
-        display: none;
     }
     .index-wrap .part3 .part3_text{
         padding: 180px 20px 10px;
+    }
+    .index-wrap.container-fluid .part3 .part3_text{
+        padding-top: 250px;
+        padding: 0;
+        width: 85%;
+    }
+    .part.part3_text span{
+        margin-top: -27px;
+    }
+    .index-wrap.container-fluid .part3{
+        margin-top: 70px;
+        margin-bottom: 50px;
+        padding: 20px;
+    }
+    .part3 .oil img{
+        top: 20px;
+    }
+    .index-wrap.container-fluid .part3 .part3-img{
+        width: 95%;
+        top: -20px;
     }
 }
 
