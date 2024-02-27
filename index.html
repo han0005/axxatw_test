@@ -202,7 +202,7 @@
                 </div>
                 <div class="swiper-textbox">
                     <!-- Each slide has parallax title -->
-                    <div class="title" data-swiper-parallax="-100">天雨周年慶</div>
+                    <div data-swiper-parallax-opacity="0.5" class="title" data-swiper-parallax="-100">天雨周年慶</div>
                     <!-- Parallax subtitle -->
                     <div class="subtitle" data-swiper-parallax="-200">活動期間:2/1-3/19 17:00</div>
                     <!-- And parallax text with custom transition duration -->
@@ -223,7 +223,7 @@
                 </div>
                 <div class="swiper-textbox">
                     <!-- Each slide has parallax title -->
-                    <div class="title" data-swiper-parallax="-100">新春茶會<span>(已截止)</span></div>
+                    <div data-swiper-parallax-opacity="0.5" class="title" data-swiper-parallax="-100">新春茶會<span>(已截止)</span></div>
                     <!-- Parallax subtitle -->
                     <div class="subtitle" data-swiper-parallax="-200">活動期間:2/20台北 14:00~16:00 <br>2/22高雄 14:00~16:00</div>
                     <!-- And parallax text with custom transition duration -->
@@ -243,7 +243,7 @@
                 </div>
                 <div class="swiper-textbox">
                     <!-- Each slide has parallax title -->
-                    <div class="title" data-swiper-parallax="-100">天雨健康斷食營<span>(名額已滿)</span></div>
+                    <div data-swiper-parallax-opacity="0.5" class="title" data-swiper-parallax="-100">天雨健康斷食營<span>(已額滿)</span></div>
                     <!-- Parallax subtitle -->
                     <div class="subtitle" data-swiper-parallax="-200">活動期間:3/23台北 | 3/16高雄</div>
                     <!-- And parallax text with custom transition duration -->
@@ -257,20 +257,18 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
 
-        <div class="swiper index-sw">
+        <div class="swiper index-sw gallery-swiper">
+            <h1>相片集 <span class="f-born"><br>Gallery</span></h1>
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"><img src="img/axxa+group.jpg"></div>
-            <div class="swiper-slide"><img src="img/2014美國年會.JPG"></div>
-            <div class="swiper-slide"><img src="img/天雨-445.jpg"></div>
+                 <!-- Slides -->
+                <div class="swiper-slide"><img src="img/axxa+group.jpg"></div>
+                <div class="swiper-slide"><img src="img/2014美國年會.JPG"></div>
+                <div class="swiper-slide"><img src="img/天雨-445.jpg"></div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+
         
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
@@ -279,7 +277,7 @@
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
         </div>
-        
+
         <footer>
             <div class="footer-area footer-top">
                 <div class="footer-logo">
@@ -353,28 +351,54 @@
     <script src="all.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
     <script>        
-        var mySwiper = new Swiper ('.swiper', {
-        direction: 'horizontal', // 垂直切换选项
-        loop: true, // 循环模式选项
-        tag: Swiper,
-        
-        
-        // 如果需要前进后退按钮
-        navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-        },
-        
-        // 如果需要滚动条
-        scrollbar: {
-        el: '.swiper-scrollbar',
-        },
+        var mySwiper = new Swiper ('.gallery-swiper', {
+            direction: 'horizontal', // 垂直切换选项
+            loop: true, // 循环模式选项
+            tag: Swiper,
+            
+            
+            // 如果需要前进后退按钮
+            navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            },
+            
+            // 如果需要滚动条
+            scrollbar: {
+            el: '.swiper-scrollbar',
+            },
 
-        controller: {
-        inverse: true,
-        },
-    })        
+            controller: {
+            inverse: true,
+            },
+             })     
   </script>
+
+  <script>
+        var newsswiper = new Swiper(".news-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            breakpoints: {
+                576: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+                },
+                768: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                },
+            },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+                    // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            },
+        });
+  </script>
+  
   <script>
         function imgSlider(anything){
             document.querySelector('.show-Pd').src=anything

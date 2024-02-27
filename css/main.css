@@ -165,42 +165,66 @@ p{
     }
 }
 /*-------------swiper---------------*/
+.news-swiper{
+    width: 90%;
+    margin: 50px auto;
+}
+
+.news-swiper .f-born{
+    font-size: 32px;
+    position: relative;
+    top: -15px;
+}
+.news-swiper .swiper-wrapper .swiper-textbox a{
+    text-decoration: none;
+    color: #E5C45D;
+}
+.news-swiper .swiper-wrapper .title{
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+}
+.news-swiper .swiper-wrapper .title:after{
+    content: "";
+    height: 52px;
+    width: 6px;
+    position: absolute;
+    left: -14px;
+    background-color: #E5C45D;
+    z-index: 999;
+}
+.news-swiper .swiper-wrapper .title span{
+    font-size: 18px;
+}
+.news-swiper .swiper-wrapper .subtitle{
+    height: 50px;
+    color: #a6a6a6;
+    position: relative;
+    top: -5px;
+}
+.gallery-swiper{
+    width: 90%;
+    margin: auto;
+}
+.gallery-swiper h1{
+    padding-left: 38px;
+}
+
 @media(max-width:745px) {
+    .news-swiper .f-born{
+        font-size: 24px;
+        top: 0;
+    }
     .news-swiper{
-        padding: 40px 38px !important;
+        padding: 10px 38px !important;
+        width: 100%;
     }
 
     .news-swiper .swiper-wrapper .swiper-textbox
     {
         padding: 5px 20px;
     }
-    .news-swiper .swiper-wrapper .swiper-textbox a{
-        text-decoration: none;
-        color: #E5C45D;
-    }
-    .news-swiper .swiper-wrapper .title{
-        font-size: 22px;
-        font-weight: 600;
-        position: relative;
-    }
-    .news-swiper .swiper-wrapper .title:after{
-        content: "";
-        height: 52px;
-        width: 6px;
-        position: absolute;
-        left: -14px;
-        background-color: #E5C45D;
-        z-index: 999;
-    }
-    .news-swiper .swiper-wrapper .title span{
-        font-size: 18px;
-    }
-    .news-swiper .swiper-wrapper .subtitle{
-        height: 50px;
-        color: #a6a6a6;
-        position: relative;
-        top: -5px;
-    }
+   
     .news-swiper .swiper-wrapper .text{}
 
     .news-swiper h1 span{
@@ -1218,8 +1242,8 @@ footer .line{
     color: #fff;
 }
 
-/*swiper*/
-.swiper {
+/*-----------------swiper----------------*/
+.gallert-swiper {
     display: none;
     width: 334px;
     height: 223px;
@@ -1229,9 +1253,21 @@ footer .line{
     width: 100%;
     height: auto;
 }
+.test-swiper{
+    width: 90%;
+    height: 360px;
+}
+.test-swiper .swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #ff5151;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media(max-width:745px) {
-    .swiper{
+    .gallery-swiper{
         display: block;
         width: 100%;
         height: auto;
