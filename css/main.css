@@ -69,6 +69,13 @@ img{
     width: 100vw;
     position: relative;
 }
+
+.swiper-button-next, .swiper-button-prev{
+    color: white !important;
+}
+.swiper-test .swiper-slide{
+    width: 33.33%;
+}
 /*------------------------以上為CSS reset-------------------------*/
 @font-face {
     font-family: 'bornready';
@@ -157,6 +164,50 @@ p{
         margin-top: -3px;
     }
 }
+/*-------------swiper---------------*/
+@media(max-width:745px) {
+    .news-swiper{
+        padding: 40px 38px !important;
+    }
+
+    .news-swiper .swiper-wrapper .swiper-textbox
+    {
+        padding: 5px 20px;
+    }
+    .news-swiper .swiper-wrapper .swiper-textbox a{
+        text-decoration: none;
+        color: #E5C45D;
+    }
+    .news-swiper .swiper-wrapper .title{
+        font-size: 22px;
+        font-weight: 600;
+        position: relative;
+    }
+    .news-swiper .swiper-wrapper .title:after{
+        content: "";
+        height: 52px;
+        width: 6px;
+        position: absolute;
+        left: -14px;
+        background-color: #E5C45D;
+        z-index: 999;
+    }
+    .news-swiper .swiper-wrapper .title span{
+        font-size: 18px;
+    }
+    .news-swiper .swiper-wrapper .subtitle{
+        height: 50px;
+        color: #a6a6a6;
+        position: relative;
+        top: -5px;
+    }
+    .news-swiper .swiper-wrapper .text{}
+
+    .news-swiper h1 span{
+        font-size: 22px;
+    }
+}
+
 /*--------------------以下為aside------------------------*/
 .ph-menu-btn{
     display: none;

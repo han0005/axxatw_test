@@ -47,7 +47,6 @@
                     <ul class="down-menu">
                         <li><a href="https://xoffice-axxa.com/default/login.html">會員系統</a></li>
                         <li><a href="faq.html">常見問題</a></li>
-                        <li><a href="#">資料下載</a></li>
                     </ul>
                 </li>
            </ul>
@@ -86,7 +85,6 @@
                         <ul class="down-menu">
                             <li><a href="https://xoffice-axxa.com/default/login.html">會員系統</a></li>
                             <li><a href="faq.html">常見問題</a></li>
-                            <li><a href="#">資料下載</a></li>
                         </ul>
                     </li>
                </ul>
@@ -189,6 +187,80 @@
             
         </div>
 
+        <div class="swiper index-sw news-swiper">
+            <!-- Parallax background element -->
+            <h1>最新消息 <span class="f-born"><br>Latest News</span></h1>
+            <div
+              class="parallax-bg"
+              style="background-image:url(path/to/image.jpg)"
+              data-swiper-parallax="-23%"
+            ></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="news-img">
+                    <img src="./img/event/抽獎EDM-04.jpg" alt="" srcset="">
+                </div>
+                <div class="swiper-textbox">
+                    <!-- Each slide has parallax title -->
+                    <div class="title" data-swiper-parallax="-100">天雨周年慶</div>
+                    <!-- Parallax subtitle -->
+                    <div class="subtitle" data-swiper-parallax="-200">活動期間:2/1-3/19 17:00</div>
+                    <!-- And parallax text with custom transition duration -->
+                    <div
+                    class="text"
+                    data-swiper-parallax="-300"
+                    data-swiper-parallax-duration="600"
+                    >
+                    <a href="#">了解更多</a>
+                    </div>
+                </div>
+
+              </div>
+
+              <div class="swiper-slide">
+                <div class="news-img">
+                    <img src="./img/event/新春茶會IG.jpg" alt="" srcset="">
+                </div>
+                <div class="swiper-textbox">
+                    <!-- Each slide has parallax title -->
+                    <div class="title" data-swiper-parallax="-100">新春茶會<span>(已截止)</span></div>
+                    <!-- Parallax subtitle -->
+                    <div class="subtitle" data-swiper-parallax="-200">活動期間:2/20台北 14:00~16:00 <br>2/22高雄 14:00~16:00</div>
+                    <!-- And parallax text with custom transition duration -->
+                    <div
+                    class="text"
+                    data-swiper-parallax="-300"
+                    data-swiper-parallax-duration="600"
+                    >
+                    <a href="#">了解更多</a>
+                    </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="news-img">
+                    <img src="./img/event/斷食營社群圖 圖文訊息.jpg" alt="" srcset="">
+                </div>
+                <div class="swiper-textbox">
+                    <!-- Each slide has parallax title -->
+                    <div class="title" data-swiper-parallax="-100">天雨健康斷食營<span>(名額已滿)</span></div>
+                    <!-- Parallax subtitle -->
+                    <div class="subtitle" data-swiper-parallax="-200">活動期間:3/23台北 | 3/16高雄</div>
+                    <!-- And parallax text with custom transition duration -->
+                    <div
+                    class="text"
+                    data-swiper-parallax="-300"
+                    data-swiper-parallax-duration="600"
+                    >
+                    <a href="#">了解更多</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
         <div class="swiper index-sw">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
@@ -286,10 +358,6 @@
         loop: true, // 循环模式选项
         tag: Swiper,
         
-        // 如果需要分页器
-        pagination: {
-        el: '.swiper-pagination',
-        },
         
         // 如果需要前进后退按钮
         navigation: {
