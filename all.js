@@ -38,6 +38,12 @@ $(document).ready(function () {
         $(this).parent().find('.faq-list3').toggleClass('open');
         $(this).find('.accordion-button').toggleClass('active');
     });
+    /*--------scroll top display------*/
+    $(window).csroll(function(){
+        var windowHeight = $(window).height();
+        console.log(scrollPos,windowHeight);
+    });
+
 });
 
 
