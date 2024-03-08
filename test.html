@@ -3,253 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap"rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
-	<link rel="stylesheet" href="./scss/style.css">
+    <title>Tabbed Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .tabs-wrap{
+            display: flex;
+        }
+        .tabs {
+            display: flex;
+            list-style: none;
+            flex-direction: column;
+            padding: 0;
+            width: 30%;
+        }
+.tabs-content{
+    width: 70%;
+}
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #eee;
+            cursor: pointer;
+  
+        }
 
-	<script src="jquery-3.7.1.min.js"></script>
-    <script src="./js/fontawesome.js"></script>
-    <script src="all.js"></script>
+        .tab.active {
+            background-color: #007bff;
+            color: #fff;
+        }
 
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .banner-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 300px; /* 更改此值以調整橫幅的高度 */
+            cursor: grab;
+        }
+
+        .banner-slider {
+            display: flex;
+            transition: transform 0.5s ease;
+            cursor: inherit;
+        }
+
+        .banner-slide {
+            flex: 0 0 100%; /* 使每個橫幅幻燈片佔滿父容器 */
+            max-width: 100%;
+        }
+
+        .banner-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-
-	<div class="container">
-        <div class="aside">
-            <ul>
-                <li><a href="index.html">首頁1</a></li>
-                <li class="about-a"><a href="about.html">關於天雨<i class="fa-solid fa-sort-down"></i></a>
-                    <ul class="down-menu">
-                        <li><a href="">天雨理念</a></li>
-                        <li><a href="ourteam.html">專業團隊</a></li>
-                        <li><a href="tech.html">技術</a></li>
-                    </ul>
-                </li>
-                <li class="pd-a"><a href="#">天雨產品<i class="fa-solid fa-sort-down"></i></a>
-                    <ul class="pd-menu">
-                        <li><a href="SOPlus.html">
-                            <img src="img/pd/源氣.png" alt="" srcset="">
-                            <h2>SO Plus 源氣</h2></a>
-                        </li>
-                        <li><a href="SOCollagen.html">
-                            <img src="img/pd/源優.png" alt="" srcset="">
-                            <h2>SO Biotic 源優</h2></a>
-                        </li>
-                        <li><a href="SOBiotic.html">
-                            <img src="img/pd/源益.png" alt="" srcset="">
-                            <h2>SO Collagen 源益</h2></a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="business.html">開啟事業</a></li>
-                <li><a href="test.html">test</a></li>
-                <li><a href="contact.html">聯絡我們</a></li>
-                <li class="about-a"><a class="xoffice" href="#">會員專區<i class="fa-solid fa-sort-down"></i></a>
-                    <ul class="down-menu">
-                        <li><a href="https://xoffice-axxa.com/default/login.html">會員系統</a></li>
-                        <li><a href="faq.html">常見問題</a></li>
-                    </ul>
-                </li>
-           </ul>
+    <div class="banner-container" onmousedown="startDrag(event)" onmouseup="endDrag()">
+        <div class="banner-slider" onmousemove="drag(event)">
+            <div class="banner-slide">
+                <img src="./img/axxa+group.jpg" alt="Banner Image 1">
+            </div>
+            <div class="banner-slide">
+                <img src="./img/business/banner-03.jpg" alt="Banner Image 2">
+            </div>
+            <div class="banner-slide">
+                <img src="image3.jpg" alt="Banner Image 3">
+            </div>
+            <!-- Add more slides as needed -->
         </div>
-        <div class="header">
-            <div class="logo"><img src="img/AG_Principle Logo_Primary.png" alt="axxa LOGO"></div>
-            <div class="menu">
-               <ul>
-                    <li><a href="index.html">首頁1</a></li>
-                    <li class="about-a"><a href="about.html">關於天雨<i class="fa-solid fa-sort-down"></i></a>
-                        <ul class="down-menu">
-                            <li><a href="">天雨理念</a></li>
-                            <li><a href="ourteam.html">專業團隊</a></li>
-                            <li><a href="tech.html">技術</a></li>
-                        </ul>
-                    </li>
-                    <li class="pd-a"><a href="#">天雨產品<i class="fa-solid fa-sort-down"></i></a>
-                        <ul class="pd-menu">
-                            <li><a href="SOPlus.html">
-                                <img src="img/pd/源氣.png" alt="" srcset="">
-                                <h2>SO Plus 源氣</h2></a>
-                            </li>
-                            <li><a href="SOCollagen.html">
-                                <img src="img/pd/源優.png" alt="" srcset="">
-                                <h2>SO Biotic 源優</h2></a>
-                            </li>
-                            <li><a href="SOBiotic.html">
-                                <img src="img/pd/源益.png" alt="" srcset="">
-                                <h2>SO Collagen 源益</h2></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="business.html">開啟事業</a></li>
-                    <li><a href="contact.html">聯絡我們</a></li>
-                    <li class="about-a"><a class="xoffice" href="#">會員專區</a>
-                        <ul class="down-menu">
-                            <li><a href="https://xoffice-axxa.com/default/login.html">會員系統</a></li>
-                            <li><a href="faq.html">常見問題</a></li>
-                        </ul>
-                    </li>
-               </ul>
+    </div>
+
+    <div class="tabs-wrap">
+        <ul class="tabs">
+            <li class="tab active" onclick="changeTab(1)">分頁1</li>
+            <li class="tab" onclick="changeTab(2)">分頁2</li>
+            <li class="tab" onclick="changeTab(3)">分頁3</li>
+        </ul>
+        <div class="tabs-content">
+            <div id="tab1" class="tab-content active">
+                <h2>這是分頁1的內容</h2>
+                <p>這裡是分頁1的內容。您可以在這裡添加任何您想要顯示的內容。</p>
             </div>
-            <div class="ph-menu-btn">
-                <a href="https://xoffice-axxa.com/default/login.html">
-                    <img src="img/icon/xoffice.jpg" alt="" width="30px" height="30px">
-                </a>
-                <a class="aside-btn">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                  </a>  
+            <div id="tab2" class="tab-content">
+                <h2>這是分頁2的內容</h2>
+                <p>這裡是分頁2的內容。您可以在這裡添加任何您想要顯示的內容。</p>
             </div>
-            
+            <div id="tab3" class="tab-content">
+                <h2>這是分頁3的內容</h2>
+                <p>這裡是分頁3的內容。您可以在這裡添加任何您想要顯示的內容。</p>
+            </div>
         </div>
+    </div>
+    
 
-		<div class="app">
-			<div class="cardList">
-				<button class="cardList__btn btn btn--left">
-					<div class="icon">
-						<svg>
-							<use xlink:href="#arrow-left"></use>
-						</svg>
-					</div>
-				</button>
-		
-				<div class="cards__wrapper">
-					<div class="card current--card">
-						<div class="card__image">
-							<img src="./img/pd/源優去背.png" alt=""/>
-						</div>
-					</div>
-		
-					<div class="card next--card">
-						<div class="card__image">
-							<img src="./img/pd/源氣去背.png" alt=""/>
-						</div>
-					</div>
-		
-					<div class="card previous--card">
-						<div class="card__image">
-							<img src="./img/pd/源益去背.png" alt=""/>
-						</div>
-					</div>
-				</div>
-		
-				<button class="cardList__btn btn btn--right">
-					<div class="icon">
-						<svg>
-							<use xlink:href="#arrow-right"></use>
-						</svg>
-					</div>
-				</button>
-			</div>
-		
-			<div class="infoList">
-				<div class="info__wrapper">
-					<div class="info current--info">
-						<h1 class="text name">SO Collagen</h1>
-						<h4 class="text location">源優 膠原蛋白飲品</h4>
-						<p class="text description">The mountains are calling</p>
-					</div>
-		
-					<div class="info next--info">
-						<h1 class="text name">SO Plus</h1>
-						<h4 class="text location">源氣種籽油精華液飲品</h4>
-						<p class="text description">Adventure is never far away</p>
-					</div>
-		
-					<div class="info previous--info">
-						<h1 class="text name">SO Biotic</h1>
-						<h4 class="text location">源益 益生菌飲品</h4>
-						<p class="text description">Let your dreams come true</p>
-					</div>
-				</div>
-			</div>
-		
-		
-			<div class="app__bg">
-				<div class="app__bg__image current--image">
-					<img src="img/co.jpg" alt="" />
-				</div>
-				<div class="app__bg__image next--image">
-					<img src="img/so.jpg" alt="" />
-				</div>
-				<div class="app__bg__image previous--image">
-					<img src="img/bi.jpg" alt="" />
-				</div>
-			</div>
-		</div>
+    <script>
+        function changeTab(tabIndex) {
+            // Hide all tab contents and remove active class from tabs
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
 
-		<footer>
-            <div class="footer-area footer-top">
-                <div class="footer-logo">
-                    <img src="img/AG_Principle Logo_Primary.png" width="60%" alt="">
-                </div>
-                <ul class="footer-down">
-                    <li>
-                        <h2>關於天雨</h2>
-                        <div class="footer-links">
-                            <a href="about.html">天雨理念</a>    
-                            <a href="ourteam.html">專業團隊</a>  
-                            <a href="tech.html">專利技術</a>   
-                        </div>
-                    </li>
-                    <li>
-                        <h2>天雨產品</h2>
-                        <div class="footer-links">
-                            <a href="SOPlus.html">源氣</a>    
-                            <a href="SOCollagen">源優</a>  
-                            <a href="SOBiotic">源益</a>  
-                        </div>
-                    </li>
-                    <li>
-                        <h2>開啟事業</h2>
-                        <div class="footer-links">
-                            <a href="">如何加入</a> 
-                            <a href="">聯絡我們</a> 
-                            <a href="">服務據點</a>  
-                        </div>
-                    </li>
-                    <li>
-                        <h2>會員專區</h2>
-                        <div class="footer-links">
-                            <a href="">聯絡我們</a>    
-                            <a href="">電子發票查詢</a>  
-                            <a href="">訂/退貨問題</a>  
-                            <a href="faq.html">常見問題</a>
-                        </div>
-                    </li>
-                    <li class="Related-agencies">
-                        <a href="https://www.dsa.org.tw/"><img src="./img/icon/footer相關icon-08.png" alt=""></a>
-                        <a href="https://www.mlmpf.org.tw/index"><img src="./img/icon/footer相關icon-09.png" alt=""></a>
-                        <a href="http://www.twamlm.org.tw/p/"><img src="./img/icon/footer相關icon-10.png" alt=""></a>
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faxxaglobal.tw&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                    </li>
-                </ul>
-                <div class="line"></div>
-                <div class="footer-contact">
-                    <div class="footer-contact-left">
-                        <p>新加坡商天雨國際股份有限公司台灣分公司</p>
-                        <p>電話 : 02-7718 1939   &nbsp;&nbsp;&nbsp; <span>地址 : 台北市中正區紹興北街3號4樓</span></p>
-                    </div>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/axxaglobalnorthasia"><img src="img/icon/FB.png" alt="Facebook"></a>
-                        <a href=""><img src="img/icon/IG.png" alt="Instagram"></a>
-                        <a href="https://lin.ee/F6duYSg"><img src="img/icon/LINE.png" alt="Line"></a>
-                        <a href="https://xoffice-axxa.com/default/login.html"><img src="img/icon/system.png" alt="member web"></a>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="footer-area-bottom">
-                <p class="right-announce">Copyright © 2024 axxaglobal. All rights reserved.</p>
-            </div>
-        </footer>
-		<div class="gotop"><a href="#"><i class="fa-solid fa-chevron-up"></i></a></div>
-	</div>
+            var tabs = document.getElementsByClassName("tab");
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
 
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
-<script src="test.js"></script>
+            // Show the selected tab content and add active class to the selected tab
+            document.getElementById("tab" + tabIndex).classList.add("active");
+            tabs[tabIndex - 1].classList.add("active");
+        }
+    </script>
+     <script>
+        let isDragging = false;
+        let startX, dragOffset;
+
+        function startDrag(event) {
+            isDragging = true;
+            startX = event.clientX;
+            dragOffset = 0;
+        }
+
+        function endDrag() {
+            isDragging = false;
+        }
+
+        function drag(event) {
+            if (!isDragging) return;
+
+            const slider = document.querySelector('.banner-slider');
+            const moveX = event.clientX - startX;
+            slider.style.transform = `translateX(${dragOffset + moveX}px)`;
+
+            event.preventDefault();
+        }
+    </script>
 </body>
 </html>

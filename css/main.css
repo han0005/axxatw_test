@@ -1599,6 +1599,7 @@ footer .line{
     justify-content: space-around;
     margin: 50px auto;
     flex-wrap: wrap;
+    max-width: 1200px;
 }
 .busi-adv .adv-part{
     width: 30%;
@@ -3215,6 +3216,26 @@ footer .line{
     margin: 0;
     font-size: 24px;
 }
+.join-box :nth-child(1){
+    border-bottom: 1px solid grey;
+}
+.join-business{
+    display: flex;
+    flex-wrap: wrap;
+}
+.join-business .sub-title{
+    width: 100%;
+}
+.join-business .join-box{
+    width: 50%;
+}
+.join-box{
+    text-align: left;
+    padding: 5px 85px 30px;
+}
+.join-box h3{
+    font-weight: 600;
+}
 
 @media(max-width:745px) {
     .business-banner-text{
@@ -3257,5 +3278,11 @@ footer .line{
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+    }
+    .join-box{
+        padding: 5px 35px 30px;
+    }
+    .join-business .join-box{
+        width: 100%;
     }
 }

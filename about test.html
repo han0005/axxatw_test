@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!--swiper--> 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">   
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="./js/fontawesome.js"></script>
+    <script src="all.js"></script>
+    <style>
+        .tabs-wrap{
+            display: flex;
+            max-width: 1280px;
+            margin: auto;
+        }
+         .tabs {
+            display: inline-block;
+            list-style: none;
+            flex-direction: column;
+            padding: 0;
+            width: 30%;
+        }
+        .tabs-content{
+            width: 70%;
+        }
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background-color: #eee;
+            cursor: pointer;
+            height: 43px;
+        }
+
+        .tab.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 0px 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+        .wrap{
+            width: 100%;
+        }
+        @media(max-width:745px) {
+            .tabs {
+            width: 100%;
+            }
+            .tabs-content{
+                width: 100%;
+            }
+            .tabs-wrap{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="aside">
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li class="about-a"><a href="about.html">關於天雨<i class="fa-solid fa-sort-down"></i></a>
+                    <ul class="down-menu">
+                        <li><a href="">天雨理念</a></li>
+                        <li><a href="ourteam.html">專業團隊</a></li>
+                        <li><a href="tech.html">技術</a></li>
+                    </ul>
+                </li>
+                <li class="pd-a"><a href="#">天雨產品<i class="fa-solid fa-sort-down"></i></a>
+                    <ul class="pd-menu">
+                        <li><a href="SOPlus.html">
+                            <img src="img/pd/源氣.png" alt="" srcset="">
+                            <h2>SO Plus 源氣</h2></a>
+                        </li>
+                        <li><a href="SOCollagen.html">
+                            <img src="img/pd/源優.png" alt="" srcset="">
+                            <h2>SO Biotic 源優</h2></a>
+                        </li>
+                        <li><a href="SOBiotic.html">
+                            <img src="img/pd/源益.png" alt="" srcset="">
+                            <h2>SO Collagen 源益</h2></a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="business.html">開啟事業</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+                <li class="about-a"><a class="xoffice" href="#">會員專區<i class="fa-solid fa-sort-down"></i></a>
+                    <ul class="down-menu">
+                        <li><a href="https://xoffice-axxa.com/default/login.html">會員系統</a></li>
+                        <li><a href="faq.html">常見問題</a></li>
+                    </ul>
+                </li>
+           </ul>
+        </div>
+        <div class="header">
+            <div class="logo"><img src="img/AG_Principle Logo_Primary.png" alt="axxa LOGO"></div>
+            <div class="menu">
+               <ul>
+                    <li><a href="index1.html">首頁</a></li>
+                    <li class="about-a"><a href="about.html">關於天雨<i class="fa-solid fa-sort-down"></i></a>
+                        <ul class="down-menu">
+                            <li><a href="">天雨理念</a></li>
+                            <li><a href="ourteam.html">專業團隊</a></li>
+                            <li><a href="tech.html">技術</a></li>
+                        </ul>
+                    </li>
+                    <li class="pd-a"><a href="#">天雨產品<i class="fa-solid fa-sort-down"></i></a>
+                        <ul class="pd-menu">
+                            <li><a href="SOPlus.html">
+                                <img src="img/pd/源氣.png" alt="" srcset="">
+                                <h2>SO Plus 源氣</h2></a>
+                            </li>
+                            <li><a href="SOCollagen.html">
+                                <img src="img/pd/源優.png" alt="" srcset="">
+                                <h2>SO Biotic 源優</h2></a>
+                            </li>
+                            <li><a href="SOBiotic.html">
+                                <img src="img/pd/源益.png" alt="" srcset="">
+                                <h2>SO Collagen 源益</h2></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="business.html">開啟事業</a></li>
+                    <li><a href="contact.html">聯絡我們</a></li>
+                    <li class="about-a"><a class="xoffice" href="#">會員專區</a>
+                        <ul class="down-menu">
+                            <li><a href="https://xoffice-axxa.com/default/login.html">會員系統</a></li>
+                            <li><a href="faq.html">常見問題</a></li>
+                        </ul>
+                    </li>
+               </ul>
+            </div>
+            <div class="ph-menu-btn">
+                <a href="https://xoffice-axxa.com/default/login.html">
+                    <img src="img/icon/xoffice.jpg" alt="" width="30px" height="30px">
+                </a>
+                <a class="aside-btn">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </a>  
+            </div>
+        </div>
+
+        <div class="business-banner">
+            <div class="business-banner-text">
+                <h1>關於天雨</h1>
+                <h3 class="f-born">About us</h3>
+            </div>
+        </div>
+
+        <div class="tabs-wrap">
+            <ul class="tabs">
+                <li class="tab active" onclick="changeTab(1)">天雨理念</li>
+                <li class="tab" onclick="changeTab(2)">獨家技術</li>
+                <li class="tab" onclick="changeTab(3)">天雨團隊</li>
+            </ul>
+
+            <div class="tabs-content">
+                <div id="tab1" class="tab-content active">
+                    <div class="wrap">
+                        <div class="about banner">
+                            <img src="img/about/smiling-healthy-asian-woman-doing-yoga-shoulder-stretching-home-pc.jpg" alt="banner">
+                            <div class="banner-text">
+                                <h1>我們都希望感覺處於最佳狀態… <br><span class="f-born">We all want to feel at our best…</span></h1>
+                                <p>日常生活不可避免地會對我們造成傷害。持續承受壓力、有害污染物和不適當的飲食會削弱我們的能量和對生活的熱情，導致我們每天醒來都感覺比前一天更疲憊。</p>
+                            </div>
+                        </div>
+                        <div class="about-text1">
+                            <h1>這讓我們捫心自問——</h1>
+                            <h1>我們能做些什麼呢？</h1>
+                            <h1>我們該如何解決這個問題？</h1>
+                        </div>
+                        <div class="about-part1">
+                            <div class="part-l">
+                                <img src="img/team/wooden-spoons-with-spices-table-s.jpg" alt="">
+                            </div>
+                            <div class="part-r">
+                                <p>我們以種子的形式找到了答案。種子中含有我們身體所需的原始而有效的營養混合物，以優化我們身體的日常表現，讓我們享受生活中所有有益的經歷。</p>
+                                <p>通過我們獲得專利的<strong style="font-weight: 800; color: #E5C45D;">NatureFRESH Cold Press™</strong> 程序，我們找到了一種提取能量種子的方法，並通過營養豐富、濃縮且方便的包裝發揮其功效。</p>
+                            </div>
+                        </div>
+                        <div class="about-part1-1">
+                            <h1>我們希望與世界分享我們的產品，讓人們每天都感覺最好，這樣他們就可以專注於重要的事情。</h1>
+                            <img class="blackseed" src="img/team/black-cumin-seeds-nigella-sativa-flower-white-backgrounds.png" alt="" srcset="">
+                            <img class="drop drop1" src="img/team/yellow-drops_1.png" alt="" srcset="">
+                            <img class="drop drop2" src="img/team/yellow-drops_2.png" alt="" srcset="">
+                            <img class="drop drop3" src="img/team/yellow-drops_3.png" alt="" srcset="">
+                        </div>
+                        <div class="about-part2">
+                            <div class="part-l">
+                                <p>無論您是一位想要花更多時間陪伴女兒的慈父，還是想要照顧父母健康的孩子，我們成立了<strong style="font-weight: 800; color: #E5C45D;">AXXA Global</strong>來幫助您和您周圍的人，過著無憂無慮、健康豐富的生活。</p>
+                                <img src="img/team/nice-girls-their-mother-father-grandfather-grandmother-are-enjoying.png" alt="">
+                            </div>  
+                            <div class="part-r">
+                                <img src="img/team/pexels-tatiana-syrikova-3933050.jpg" alt="">
+                                <p class="f-born">Wellness made easy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab2" class="tab-content">
+                    <div class="tech banner">
+                        <div class="tech-text">
+                            <h1>良好的營養對於身體的修復至關重要... <br><span class="f-born">We all want to feel at our best…</span></h1>
+                        </div>
+                    </div>
+                    <div class="why-seed">
+                        <h1><span class="f-born">Why Seeds?</span><br>為什麼選擇種籽？</h1>
+                        <p>種子含有發育成複雜植物所需的所有起始材料，因此它們的營養非常豐富。<br>它們含有：抗氧化劑、必需脂肪酸、維生素和礦物質。</p>
+                    </div>
+            
+                    <div class="extraction">
+                        <img src="./img/tech/drop oil.png" alt="">
+                        <h1>提取方法 <span class="f-born">Extraction method</span><br>
+                            使用專利的 NatureFRESH™冷壓技術</h1>
+                        <p>一．油是在低於 100 攝氏度的缺氧環境下提取的，與使用熱量和化學物質的傳統方法相比，可生產出品質優良的油。</p>
+                        <br><p>二. 過程中未添加任何物質，您得到的是強效、純正的種子油，估計 7 公斤漿果只能產出 1 茶匙的種子油。</p> 
+                    </div>
+            
+                    <div class="journey">
+                        <h1 class="f-born">The Journey of the Seed</h1>
+                        <ul class="journey-part">
+                            <li>
+                                <img src="img/tech/source.jpg" alt="" srcset="">
+                                <h2>1.來源和收到</h2>
+                                <p>種子來自我們合格的供應商，並在我們合規的環境控制設施中接收。</p>
+                            </li>
+                            <li>
+                                <img src="img/tech/coldpress.jpg" alt="">
+                                <h2>2.冷壓</h2>
+                                <p>種子流入壓榨室，壓力逐漸增加，將油從種子殼（粗粉）中分離出來。</p>
+                            </li>
+                            <li>
+                                <img src="img/tech/seeds&oil.jpg" alt="" srcset="">
+                                <h2>3.種子粉/油</h2>
+                                <p>種子粉是由壓榨後的固體經去油處理和磨碎而成。種子油則是經過沉澱和過濾，去除微小顆粒而製成。</p>
+                            </li>
+                        </ul>
+                        <p class="journey-p">包裝好的
+                            成品油和粉末儲存在氮氣層下以保持新鮮度，直到包裝和運輸。</p>
+                    </div>
+                    <div class="tech-content">
+                        <ul>
+                            <li>
+                                <div class="tech-content-img">
+                                    <img src="img/tech/perfect blend.jpg" alt="">
+                                </div>
+                                <div class="tech-content-text">
+                                    <h1>創造完美的融合<span class="f-born">Creating the perfect blend</span> <br>
+                                        <span class="TM-s">專利協同冷壓混合油(編號 7897194)</span></h1>
+                                    <p>一. 黑小茴香籽油和黑覆盆子籽油這兩種油的組合具有比單獨油的加權平均值的總和更高的抗氧化活性。
+                                        <br><br>
+                                        二. 為什麼？我們的研究表明，黑孜然籽油與其他植物油調合，釋放與過渡金屬的抗氧化鍵，並釋放更多的抗氧化劑。
+                                        <br><br>
+                                        三. 因此，我們的協同混合物具有增強的抗氧化作用</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tech-content-img">
+                                    <img src="img/tech/how do we know.jpg" alt="">
+                                </div>
+                                <div class="tech-content-text">
+                                    <h1>我們怎麼知道？<span class="f-born">How do we know?</span></h1>
+                                    <p>氧自由基吸收能力（ORAC）6.0測試。由獨立第三方實驗室 Brunswick Laboratories 進行評估，以評估抗氧化劑對抗自由基的有效性。事實證明，我們的混合物具有最高的 ORAC 值之一，並將其納入我們的產品中。</p>
+                                </div>
+                            </li>                
+                            <li>
+                                <div class="tech-content-img">
+                                    <img src="img/tech/3product.jpg" alt="">
+                                </div>
+                                <div class="tech-content-text">
+                                    <h1>尖端方法論<span class="f-born">Cutting-edge Methodology</span></h1>
+                                    <p>我們將精心挑選的種子結合在一起，以最濃縮、最有效和最純淨的形式將它們交付給世界各地的消費者，不走任何捷徑。您無需返回源頭，因為我們正在將源頭帶給您。</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <p class="journey-p">*這些陳述未經食品藥品監督管理局評估。本產品不用於診斷、治療、治愈或預防任何疾病。</p>
+                    </div>
+                </div>
+                <div id="tab3" class="tab-content">
+                    <div class="ourteam-banner">
+                        <img src="img/首頁banner.jpg" alt="banner">
+                        <div class="team-title">
+                            <h1>天雨團隊</h1>
+                            <h2 class="f-born">Our team</h2>
+                        </div>
+                    </div>
+            
+                    <div class="team1 part2">
+                        <div class="part left">
+                            <div>
+                                <img class="fk-bg-drop"  src="img/team/yellow-drops_1.png" alt="">
+                            </div>
+                            <img class="frankee" src="img/team/frankee lee.png">
+                        </div>
+                        <div class="part right ourteam-underline">
+                            <h1>Frankie Lee <br><span class="f-born">Chairman</span></h1>
+                            <p>Frankie Lee 是 AXXA Global 的創始人兼董事長。結合了他對健康的熱情和商業頭腦，他決定創建一個平台，幫助其他人創造自己的未來。憑藉 30 多年的商業經驗，他帶領 AXXA Global 在全球範圍內擴張，傳播對種子營養的熱情。</p>
+                        </div>
+                    </div>
+                    <div class="team2 part1">
+                        <div class="part left ourteam-underline">
+                            <h1>Hsin Chong <br><span class="f-born">Chief Executive Officer</span></h1>
+                            <p>具有經濟學背景的運動和營養狂熱者。我們的首席執行官 Hsin Chong 加入 AXXA Global 領導海外業務的發展，並提供對營養行業的重要見解。他的目標是揭示適當營養的世界，同時使人們能夠承擔起創造變革和做出改變的責任。</p>
+                        </div>
+                        <div class="part right">
+                            <div>
+                                <img class="sh-bg" src="" alt="" srcset="">
+                                <img class="sh-bg-drop"  src="img/team/yellow-drops_2.png" alt="">
+                            </div>
+                            <img class="shin" src="img/team/shin.png">
+                        </div>
+                    </div>
+            
+                    <div class="expert-team">
+            
+                    </div>
+            
+                    
+            
+                    <div class="team3 part3">
+                        <div class="part part3_text">
+                            <h1>天雨顧問委員 <br>
+                                <span class="f-born">Our Scientific Advisory Board</span>  </h1>
+                            <p>為了更好的未來而努力，以興趣結合社群來創業，發揮創玩精神，實現工作與自由平衡的生活。</p>
+                            <ul class="our-expert">
+                                <li>
+                                    <img src="img/team/Scientific Advisor.jpg" alt="" srcset="">
+                                    <h2>DR.CHARLES MUSCOPLAT PH.D</h2>
+                                    <h3 class="f-born">Scientific Advisor</h3>
+                                    <p>Charles Muscoplat是明尼蘇達大學食品與環境科學教授，同時擔任農業學院名譽院長藥物開發委員會主席。他是免疫學和微生物學博士，專注於腫瘤學、免疫學和傳染病領域，並已成功開發兩種商業藥物。他在學術和工業研發方面有豐富的經驗，並在促進食品科學、農業、健康和營養方面取得了國際聲譽。</p>
+                                </li>
+                                <li>
+                                    <img src="img/team/mark-mueller.jpg" alt="" srcset="">
+                                    <h2>MARK J. MUELLER <br> <span style="color: #fff;">.</span></h2>
+                                    <h3 class="f-born">Scientific Advisor</h3>
+                                    <p>
+                                        Mark Mueller於1999年創立了Botanic Innovations, LLC，專注於冷萃取的植物種子脂質和粉末的營養和健康屬性。他將商業經驗與植物學專業知識相結合，致力於探索種子油和粉末對人類健康的影響。Mueller還是「協同超強抗氧化劑冷壓植物油混合物」專利的發明者之一。</p>
+                                </li>
+                                <li>
+                                    <img src="img/team/348s.jpg" alt="" srcset="">
+                                    <h2>DR TODD MIRZAI, MD</h2>
+                                    <h3 class="f-born">Scientific Advisor</h3>
+                                    <p>
+                                        Todd Mirzai醫學博士是Botanic Innovations的董事會成員，該公司專注於生產營養豐富的冷壓種子油和麵粉，廣泛應用於功能性食品和化妝品市場。除了是整形外科醫生外，Mirzai博士還是私募股權公司的合夥人，並在健康科技領域擔任顧問和董事會成員。</p>
+                                </li>
+                                <li>
+                                    <img src="img/team/Dr.-Jenkins-Headshot-scaled.jpg" alt="" srcset="">
+                                    <h2>DR NOAH JENKINS PH.D</h2>
+                                    <h3 class="f-born">Scientific Advisor</h3>
+                                    <p>Noah Jenkins博士是Botanic Innovations的創新副總裁，擁有分子生物學博士學位。他專攻癌症研究，並在多家頂尖科學期刊上發表研究論文。Jenkins博士研究了小兒神經腫瘤學和小兒心臟病學，並開發了幾種有益於人類健康的小分子抑制劑。他熱衷於探索天然產品和植物營養素的正面效應，以及如何利用它們來增強健康。</p>
+                                </li>
+                            </ul>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            
+                </div>
+            </div>
+        </div>
+
+    
+        <footer>
+            <div class="footer-area footer-top">
+                <div class="footer-logo">
+                    <img src="img/AG_Principle Logo_Primary.png" width="60%" alt="">
+                </div>
+                <ul class="footer-down">
+                    <li>
+                        <h2>關於天雨</h2>
+                        <div class="footer-links">
+                            <a href="about.html">天雨理念</a>    
+                            <a href="ourteam.html">專業團隊</a>  
+                            <a href="tech.html">專利技術</a>   
+                        </div>
+                    </li>
+                    <li>
+                        <h2>天雨產品</h2>
+                        <div class="footer-links">
+                            <a href="SOPlus.html">源氣</a>    
+                            <a href="SOCollagen">源優</a>  
+                            <a href="SOBiotic">源益</a>  
+                        </div>
+                    </li>
+                    <li>
+                        <h2>開啟事業</h2>
+                        <div class="footer-links">
+                            <a href="">如何加入</a> 
+                            <a href="">聯絡我們</a> 
+                            <a href="">服務據點</a>  
+                        </div>
+                    </li>
+                    <li>
+                        <h2>會員專區</h2>
+                        <div class="footer-links">
+                            <a href="">聯絡我們</a>    
+                            <a href="">電子發票查詢</a>  
+                            <a href="">訂/退貨問題</a>  
+                            <a href="faq.html">常見問題</a>
+                        </div>
+                    </li>
+                    <li class="Related-agencies">
+                        <a href="https://www.dsa.org.tw/"><img src="./img/icon/footer相關icon-08.png" alt=""></a>
+                        <a href="https://www.mlmpf.org.tw/index"><img src="./img/icon/footer相關icon-09.png" alt=""></a>
+                        <a href="http://www.twamlm.org.tw/p/"><img src="./img/icon/footer相關icon-10.png" alt=""></a>
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Faxxaglobal.tw&tabs=timeline&width=300&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </li>
+                </ul>
+                <div class="line"></div>
+                <div class="footer-contact">
+                    <div class="footer-contact-left">
+                        <p>新加坡商天雨國際股份有限公司台灣分公司</p>
+                        <p>電話 : 02-7718 1939   &nbsp;&nbsp;&nbsp; <span>地址 : 台北市中正區紹興北街3號4樓</span></p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/axxaglobalnorthasia"><img src="img/icon/FB.png" alt="Facebook"></a>
+                        <a href=""><img src="img/icon/IG.png" alt="Instagram"></a>
+                        <a href="https://lin.ee/F6duYSg"><img src="img/icon/LINE.png" alt="Line"></a>
+                        <a href="https://xoffice-axxa.com/default/login.html"><img src="img/icon/system.png" alt="member web"></a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="footer-area-bottom">
+                <p class="right-announce">Copyright © 2024 axxaglobal. All rights reserved.</p>
+            </div>
+        </footer>
+        <div class="gotop"><a href="#"><i class="fa-solid fa-chevron-up"></i></a></div>
+    
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+        <script>
+            function changeTab(tabIndex) {
+                // Hide all tab contents and remove active class from tabs
+                var tabContents = document.getElementsByClassName("tab-content");
+                for (var i = 0; i < tabContents.length; i++) {
+                    tabContents[i].classList.remove("active");
+                }
+    
+                var tabs = document.getElementsByClassName("tab");
+                for (var i = 0; i < tabs.length; i++) {
+                    tabs[i].classList.remove("active");
+                }
+    
+                // Show the selected tab content and add active class to the selected tab
+                document.getElementById("tab" + tabIndex).classList.add("active");
+                tabs[tabIndex - 1].classList.add("active");
+            }
+        </script>
+    </body>
+</html>    
+    
