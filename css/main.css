@@ -87,6 +87,7 @@ img{
     src: url('https://static1.squarespace.com/static/63071dfeb81deb5ffdb0a2b2/t/630c35c780fdd80dc7d5c9e6/1661744583372/Lexend-Regular.ttf')
 }
 
+
 .f-born{
     font-family: 'bornready';
     font-weight: 300;
@@ -306,7 +307,7 @@ p{
     display: block;
     text-decoration: none;
     text-align: center;
-    padding: 25px;
+    padding: 20px;
     font-size: 20px;
     color: #939393;
     font-weight: bolder;
@@ -2879,7 +2880,7 @@ footer .line{
     text-align: center;
 }
 .journey h1{
-    font-size: 32px;
+    font-size: 22px;
     margin-bottom: 30px;
 }
 .journey-part{
@@ -3017,11 +3018,12 @@ footer .line{
 
 /*-------------faq part-------------------*/
 .faq-banner{
-    height: 520px;
-    max-width: 100%;
-    background-image: url(../img/faq/faq-banner-pc.jpg);
+    background-image: url(../img/faq/faq-banner.jpg);
+    height: 350px;
+    width: 100%;
+    background-position: right;
     background-size: cover;
-    background-position: left;
+    position: relative;
 }
 .faq-banner-ph{
     display: none;
@@ -3108,11 +3110,12 @@ footer .line{
 
 @media only screen and (min-width: 0px) and (max-width: 767px){
     .faq-banner{
-        background-image: url(../img/faq/faq-banner-ph.jpg);
-        background-position: center;
-        height: 280px;
+        height: 150px;
     }
     .faq-container {max-width: 860px;
+    }
+    .business-banner-text{
+        display: none;
     }
     .faq-container .section-title{
         padding: 18px 0;
@@ -3136,6 +3139,7 @@ footer .line{
     }
 }
 /*------------------------------------*/
+
 .business-banner{
     background-image: url(../img/business/banner-03.jpg);
     height: 350px;
@@ -3247,7 +3251,7 @@ footer .line{
     .business-banner .f-born{
         font-size: 20px;
     }
-    .business-banner{
+    .banner-part{
         height: 150px;
     }
     .business-banner h1{
@@ -3284,5 +3288,114 @@ footer .line{
     }
     .join-business .join-box{
         width: 100%;
+    }
+}
+
+/*------------------------------Event Part----------------------------------*/
+.event-banner{
+    background-image: url(../img/event/天雨活動頁banner.jpg);
+    height: 350px;
+    width: 100%;
+    background-position: right;
+    background-size: cover;
+    position: relative;
+}
+.event-part{
+    margin-top: 50px;
+}
+.event-box{
+    width: 800px;
+    display: flex;
+    margin: 0 2%;
+    box-shadow: 0px 2px 8px rgba(0,0,0,.1);
+    padding: 24px;
+    border-radius: 16px;
+}
+.event-box img{
+    width: 39%;
+}
+.event-part .event-box{
+    margin-bottom: 30px;
+}
+.event-part .event-box .text-part{
+    width: 59%;
+    margin-left: 26px;
+    position: relative;
+}
+.event-box .text-part .event-time{
+    color: #999999;
+    margin-bottom: 5px;
+}
+.event-box .text-part .event-title{
+    font-size: 36px;
+}
+
+.event-box .text-part .event-tags{
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.event-box .text-part .event-tags .event-t{
+    margin-right: 5px;
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    padding: 2px 10px;
+    color: #ffffff;
+    font-family: 'Noto Sans';
+}
+
+.event-box .text-part .more a{
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #999999;
+}
+.event-box .text-part .more a:hover{
+    color: #E5C45D;
+}
+
+.event-box .text-part .event-tags .tag-green{
+    background-color: #64ce20;
+}
+.event-box .text-part .event-tags .tag-blue{
+    background-color: #00aaf5;
+}
+.event-box .text-part .event-tags .tag-orange{
+    background-color: #f0830e;
+}
+.event-box .text-part .event-tags .tag-yellow{
+    background-color: #ffe41d;
+}
+@media(max-width:1024px) {
+    .event-box{
+        width: 90%;
+        margin: auto;
+    }
+}
+@media(max-width:745px) {
+    .event-banner{
+        height: 180px;
+    }
+    .event-part .event-box{
+        flex-direction: column;
+    }
+    .event-part .event-box img{
+        width: 100%;
+    }
+    .event-part .event-box .text-part{
+        width: 100%;
+        margin-left: 0;
+    }
+    .event-part .event-box .text-part p{
+        margin-bottom: 60px;
+    }
+    .event-box .text-part .event-title{
+        font-size: 28px;
+        margin-top: 20px;
     }
 }
