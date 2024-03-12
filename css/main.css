@@ -3148,7 +3148,7 @@ footer .line{
     background-size: cover;
     position: relative;
 }
-.business-banner-text{
+.business-banner-text, .event-banner-text{
     position: absolute;
     left: 22%;
     top: 38%;
@@ -3239,6 +3239,10 @@ footer .line{
 }
 .join-box h3{
     font-weight: 600;
+}
+
+.event-banner .event-banner-text .f-born{
+    font-size: 26px;
 }
 
 @media(max-width:745px) {
@@ -3371,6 +3375,10 @@ footer .line{
 .event-box .text-part .event-tags .tag-yellow{
     background-color: #ffe41d;
 }
+
+.banner-text-ph{
+    display: none;
+}
 @media(max-width:1024px) {
     .event-box{
         width: 90%;
@@ -3397,5 +3405,20 @@ footer .line{
     .event-box .text-part .event-title{
         font-size: 28px;
         margin-top: 20px;
+    }
+    .banner-text-ph{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        left: 0;
+        top: 0;
+        margin: 25px auto 20px;
+    }
+    .banner-text-pc{
+        display: none;
+    }
+    .event-part{
+        margin-top: 0px;
     }
 }
