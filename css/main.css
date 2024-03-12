@@ -3422,3 +3422,12 @@ footer .line{
         margin-top: 0px;
     }
 }
+
+/*----------------------------------event-page---------------------------------------*/
+.event-page-banner{
+    max-width: 1200px;
+    margin: auto;
+}
+.event-page-banner img{
+    width: 100%;
+}
