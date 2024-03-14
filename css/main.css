@@ -3310,12 +3310,12 @@ footer .line{
 .event-box{
     width: 800px;
     display: flex;
-    margin: 0 2%;
+    margin: auto;
     box-shadow: 0px 2px 8px rgba(0,0,0,.1);
     padding: 24px;
     border-radius: 16px;
 }
-.event-box img{
+.event-box a{
     width: 39%;
 }
 .event-part .event-box{
@@ -3334,14 +3334,14 @@ footer .line{
     font-size: 36px;
 }
 
-.event-box .text-part .event-tags{
+.event-box .text-part .event-tags,.event-page-content .event-tags{
     display: flex;
     border-bottom: 1px solid gainsboro;
     margin-bottom: 15px;
     padding-bottom: 15px;
 }
 
-.event-box .text-part .event-tags .event-t{
+.event-box .text-part .event-tags .event-t,.event-page-content .event-tags .event-t{
     margin-right: 5px;
     height: auto;
     width: auto;
@@ -3362,17 +3362,16 @@ footer .line{
 .event-box .text-part .more a:hover{
     color: #E5C45D;
 }
-
-.event-box .text-part .event-tags .tag-green{
+.event-tags .tag-green{
     background-color: #64ce20;
 }
-.event-box .text-part .event-tags .tag-blue{
+.event-tags .tag-blue{
     background-color: #00aaf5;
 }
-.event-box .text-part .event-tags .tag-orange{
+.event-tags .tag-orange{
     background-color: #f0830e;
 }
-.event-box .text-part .event-tags .tag-yellow{
+.event-tags .tag-yellow{
     background-color: #ffe41d;
 }
 
@@ -3392,7 +3391,7 @@ footer .line{
     .event-part .event-box{
         flex-direction: column;
     }
-    .event-part .event-box img{
+    .event-part .event-box a{
         width: 100%;
     }
     .event-part .event-box .text-part{
@@ -3428,6 +3427,50 @@ footer .line{
     max-width: 1200px;
     margin: auto;
 }
+.event-page-content{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+}
 .event-page-banner img{
     width: 100%;
+}
+.event-page-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    box-shadow: 0px 2px 8px rgba(0,0,0,.1);
+    padding: 24px;
+    border-radius: 16px;
+}
+.event-page-box h3{
+    font-size: 18px;
+}
+.event-page-box p{
+    margin-top: 15px;
+}
+.event-details{
+    padding: 0 10px;
+    margin: 20px auto 50px;
+}
+.event-details h2{
+    font-size: 26px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+}
+.event-details p a{
+    text-decoration: none;
+    color: #E5C45D;
+    font-weight: 900;
+}
+@media(max-width:745px) {
+    .event-page-content{
+        margin: 10px 20px 5px;
+    }
+    .event-page-box h3{
+        font-size: 18px;
+    }
+    .event-page-banner{
+        height: auto;
+    }
 }
