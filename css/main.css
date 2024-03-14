@@ -3432,6 +3432,10 @@ footer .line{
     margin: auto;
     margin-top: 20px;
 }
+.event-page-content h1{
+    margin-bottom: 5px;
+}
+
 .event-page-banner img{
     width: 100%;
 }
