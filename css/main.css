@@ -76,6 +76,11 @@ img{
 .swiper-test .swiper-slide{
     width: 33.33%;
 }
+
+.event-page-content img,.biotic-info-pc img,.biotic-info-ph img{
+    vertical-align: bottom;
+}
+
 /*------------------------以上為CSS reset-------------------------*/
 @font-face {
     font-family: 'bornready';
