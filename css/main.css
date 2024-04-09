@@ -77,7 +77,7 @@ img{
     width: 33.33%;
 }
 
-.event-page-content img,.biotic-info-pc img,.biotic-info-ph img{
+.event-page-content img,.biotic-info-pc img,.biotic-info-ph img,.collagen-info-ph img{
     vertical-align: bottom;
 }
 
@@ -172,7 +172,7 @@ p{
 }
 /*-------------swiper---------------*/
 .news-swiper{
-    width: 75%;
+    max-width: 1200px;
     margin: 50px auto;
 }
 
@@ -209,7 +209,7 @@ p{
     top: -5px;
 }
 .gallery-swiper{
-    width: 75%;
+    max-width: 1200px;
     margin: auto;
 }
 .gallery-swiper h1{
@@ -594,10 +594,10 @@ p{
 @media(max-width:1230px){
     .index-banner1{
         height: 682px;
-        background-image: url(../img/index/首頁banner-pc.png);
         background-size: cover;
         background-position: left;
         position: relative;
+
     }
 }
 @media(max-width:1200px) {
@@ -619,6 +619,7 @@ p{
     .index-banner{
         height: 586px;
         background-image: url(../img/首頁banner\ mobile.jpg);
+        display: none;
     }
     .index-banner1 .banner-1-text,.index-curve,.index-banner1 img{
         display: none;
@@ -918,7 +919,7 @@ p{
 
 @media(max-width:745px) {
     .index-banner1{
-        background-image: url(../img/index/天雨台灣首頁\ banner.jpg);
+        background-image: url(../img/index/webp/天雨台灣首頁\ banner.webp);
         height: 592px;
         background-size: cover;
         background-position: center center;
@@ -939,7 +940,7 @@ p{
     }
     .index-wrap .part2 .right{
         width: 100%;
-        padding: 180px 27px 42px;
+        padding: 65px 27px 42px;
     }
     .index-wrap .part1 .right{
         width: 100%;
@@ -1293,6 +1294,10 @@ footer .line{
     position: relative;
 }
 
+.about.banner img{
+    height: 560px;
+}
+
 .about.banner .banner-text{
     width: 45%;
     padding: 30px 45px;
@@ -1327,6 +1332,19 @@ footer .line{
     margin: 20px;
 }
 
+@media(max-width:1200px) {
+    .about.banner img{
+        height: 500px;
+    }
+}
+@media(max-width:1000px) {
+    .about.banner img{
+        height: 400px;
+    }
+    .about .banner-text h1{
+        font-size: 32px;
+    }
+}
 @media(max-width:745px) {
     .about.banner .banner-text{
         position: relative;
@@ -1334,6 +1352,9 @@ footer .line{
         transform: none;
         padding: 20px;
         right: 0;
+    }
+    .about.banner img{
+        height: auto;
     }
 
     .about-text1{
@@ -1783,7 +1804,7 @@ footer .line{
     background:linear-gradient(black white);
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     position: relative;
     background-image: url('../img/contact/32613745_global_network2.png');
@@ -1803,6 +1824,10 @@ footer .line{
 .world-contact-title a:hover{
     background-color: #E5C45D;
     color: #fff;
+}
+.world-contact-title h1{
+    margin-top: 36px;
+    font-size: 28px;
 }
 .axxatw-info{
     display: flex;
@@ -1928,6 +1953,7 @@ footer .line{
     .world-contact-title{
         width: 100%;
         justify-content: center;
+        height: 180px;
     }
     .world-contact-title h1 span{
         display: block;
@@ -1945,14 +1971,14 @@ footer .line{
     }
 
     .world-contact-title h1 span{
-        font-size: 22px;
+        font-size: 18px;
     }
 }
 
 /*--------------------team--------------------*/
 .ourteam-banner{
-    height: 686px;
-    background-image: url(../img/axxa+group2.jpg);
+    height: 350px;
+    background-image: url(../img/team/天雨團隊banner.jpg);
     background-size: cover;
     background-position: bottom;
     position: relative;
@@ -2138,9 +2164,9 @@ footer .line{
     }
     .ourteam-banner{
         width: 100%;
-        height: 320px;
+        height: 180px;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: right;
     }
     .team-title{
         padding-top: 22px;
@@ -2154,7 +2180,10 @@ footer .line{
         width: 60%;
     }
     .ourteam-banner{
-        background-image: url('../img/axxa+group.jpg');
+        background-image: url('../img/team/天雨團隊banner.jpg');
+    }
+    .ourteam-banner .business-banner-text .f-born{
+        font-size: 26px;
     }
 }
 @media(max-width:426px) {
@@ -2473,6 +2502,7 @@ footer .line{
         width: 25%;
     }
 }  
+
 /*----------------SO Collagen----------------*/
 .SOCollagen.banner{
     width: 100%;
@@ -2718,6 +2748,16 @@ footer .line{
     }
     .SOCollagen.banner .pdBox{
         max-width: 80%;
+    }
+}
+
+/*------SO Collagen img---------*/
+.collagen-info-ph{
+    display: none;
+}
+@media(max-width:745px) {
+    .collagen-info-ph{
+        display: block;
     }
 }
 
@@ -3251,6 +3291,9 @@ footer .line{
 }
 
 @media(max-width:745px) {
+    .business-banner-ph{
+        height: 180px;
+    }
     .business-banner-text{
     left: 10%;
     }
@@ -3259,9 +3302,6 @@ footer .line{
     }
     .business-banner .f-born{
         font-size: 20px;
-    }
-    .banner-part{
-        height: 150px;
     }
     .business-banner h1{
 
@@ -3379,6 +3419,9 @@ footer .line{
 .event-tags .tag-yellow{
     background-color: #ffe41d;
 }
+.event-tags .tag-red{
+    background-color: red;
+}
 
 .banner-text-ph{
     display: none;
@@ -3434,11 +3477,15 @@ footer .line{
 }
 .event-page-content{
     max-width: 1200px;
-    margin: auto;
-    margin-top: 20px;
+    margin: 20px auto 0px;
 }
 .event-page-content h1{
     margin-bottom: 5px;
+}
+
+.event-page-content h1 span,.event-title span{
+    font-size: 22px;
+    color: #535353;
 }
 
 .event-page-banner img{
@@ -3450,13 +3497,24 @@ footer .line{
     margin-top: 0;
     box-shadow: 0px 2px 8px rgba(0,0,0,.1);
     padding: 24px;
-    border-radius: 16px;
+    border-radius: 10px;
 }
 .event-page-box h3{
     font-size: 18px;
 }
 .event-page-box p{
     margin-top: 15px;
+}
+.event-page-box a{
+    background-color: rgb(229, 196, 93);
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 16px;
+    font-weight: 900;
+}
+.event-page-box a:hover{
+    background-color: rgb(252, 232, 175);
 }
 .event-details{
     padding: 0 10px;
@@ -3482,4 +3540,26 @@ footer .line{
     .event-page-banner{
         height: auto;
     }
+}
+@media(min-width:745px){
+    .event-page-content{
+        padding: 0px 35px 0px;
+    }
+}
+
+.index-banner1-test{
+    background-image: url(../img/index/壓縮照片/天雨台灣首頁\ banner\ 超壓縮.jpg);
+}
+
+/*-----------------calendar---------------------*/
+.calendar-banner{
+    background-image: url(../img/calendar/天雨活動頁banner.jpg);
+    height: 110px;
+    background-position: right;
+    background-size: cover;
+}
+.calendar-container h2{
+    text-align: center;
+    margin: 20px auto;
+    font-size: 20px;
 }
