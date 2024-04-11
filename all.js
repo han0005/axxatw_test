@@ -47,6 +47,22 @@ $(document).ready(function () {
 });
 
 
+ $(window).scroll(function(){
+    var scrollPos = $(window).scrollTop();
+      var windowHeight = $(window).height();
+     console.log(scrollPos, windowHeight);
+
+
+    var test = document.querySelector('.gotop')
+
+      if (scrollPos > 150) {
+        test.setAttribute('class', 'gotop gotopShow animate__animated animate__fadeInLeft');
+    }
+     if (scrollPos < 150) {
+          test.setAttribute('class', 'gotop animate__animated animate__fadeInLeft');
+       }
+  });
+
 
 
 

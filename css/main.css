@@ -966,6 +966,7 @@ p{
 .index-wrap .part1 .right{
     width: 50%;
     text-align: center;
+    transition: 1s;
 }
 .index-wrap .part1 .right img{
     width: 100%;
@@ -1331,8 +1332,15 @@ footer .line{
 .gotop{
     position: fixed;
     bottom: 50px;
-    right: 10px;
+    right: -50px;
     z-index: 1;
+    transition: 1s;
+    opacity: 0;
+}
+.gotopShow{
+    bottom: 50px;
+    right: 10px;
+    opacity: 1;
 }
 
 .gotop a{

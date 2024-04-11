@@ -8,6 +8,7 @@
     <title>axxaglobal天雨國際|台灣</title>
     <meta name="description" content="axxaglobal天雨國際是種籽油領域專家，採用專利冷壓技術，能完整萃取種籽中的精華營養。除了添加黑小茴香籽的天雨明星產品源氣外，源優與源益兩款產品也結合了種籽油、益生菌與膠原蛋白，為您提供多樣的種籽油產品選擇。加入天雨，為您打造自由、財富與健康的生活。立即瀏覽，了解更多關於天雨的資訊。Axxaglobal Taiwan。">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!--swiper--> 
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,7 +16,7 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v19.0" nonce="FLbBXFky"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container"> 
         <div class="aside">
             <ul>
                 <li><a href="index.html">首頁</a></li>
@@ -121,7 +122,7 @@
 
         <div class="wrap index-wrap">
             <div class="part1">
-                <div class="part right">
+                <div class="part right animate__animated animate__fadeInLeft">
                     <img src="img/index/天雨台灣首頁-04.jpg" alt="祝福的種籽-黑小茴香籽">
                 </div>
                 <div class="part left">
@@ -166,7 +167,7 @@
                 <div class="oil">
                     <img src="./img/index/網頁首頁-02.png" alt="背景圖案">
                 </div>
-                <div class="part3-img">
+                <div class="part3-img" id="part3-img">
                     <img src="./img/index/網頁首頁-03.png" alt="找到工作與自由間的平衡">
                 </div>
                 <div class="part part3_text">
@@ -409,6 +410,24 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
+        });
+
+        //show animate
+        $(window).scroll(function(){
+            var scrollPos = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            console.log(scrollPos, windowHeight);
+
+            var part3imgTop = $('#part3-img').position().top;
+
+            var test = document.querySelector('.gotop')
+            //console.log('part3imgTop', part3imgTop);
+            if (scrollPos > 150) {
+                test.setAttribute('class', 'gotop gotopShow animate__animated animate__fadeInLeft');
+            }
+            if (scrollPos < 150) {
+                test.setAttribute('class', 'gotop animate__animated animate__fadeInLeft');
+            }
         });
   </script>
   
