@@ -92,6 +92,18 @@ img{
     src: url('https://static1.squarespace.com/static/63071dfeb81deb5ffdb0a2b2/t/630c35c780fdd80dc7d5c9e6/1661744583372/Lexend-Regular.ttf')
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@800&family=Noto+Sans+TC:wght@100..900&display=swap');
+.noto-sans {
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+
+body{
+    font-family: "Noto Sans TC", sans-serif;
+}
 
 .f-born{
     font-family: 'bornready';
@@ -114,6 +126,7 @@ p{
     line-height: 1.8;
     letter-spacing: 1px;
     color: #656565;
+
 }
 .so{
     font-family: 'lexend';
@@ -171,11 +184,53 @@ p{
     }
 }
 /*-------------swiper---------------*/
-.news-swiper{
+.newsArea{
+    background-color: #f5f5f5;
+    margin-bottom: 56px;
+}
+.newsArea .wrap{
+    display: flex;
+    justify-content: space-around;
     max-width: 1200px;
-    margin: 50px auto;
+    margin: auto;
+}
+.news-swiper{
+    width: 66%;
+    max-width: 1200px;
+    margin: 50px auto 20px;
+}
+.news-swiper h1{
+    display: none;
 }
 
+.index-newsleft .titleBox{
+    margin-bottom: 36px;
+}
+.index-newsleft{
+    width: 30%;
+    padding: 20px 19px 44px 50px;
+}
+.index-newsleft .btnBox{
+    margin-top: 25px;
+}
+
+.index-newsleft .btnBox a{
+    text-decoration: none;
+    color: #E5C45D;
+    letter-spacing: 1px;
+}
+.titleBox .titleMain{
+    margin-top: 20px;
+}
+.titleBox .titleMain::after{
+    content: "";
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 15px;
+    background-color: #e5e5e5;
+}
 .news-swiper .f-born,.gallery-swiper .f-born{
     font-size: 32px;
     position: relative;
@@ -184,9 +239,14 @@ p{
 .news-swiper .swiper-wrapper .swiper-textbox a{
     text-decoration: none;
     color: #E5C45D;
+    display: none;
 }
 .news-swiper .swiper-wrapper .title{
-    font-size: 22px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: "Cardo", "Noto Serif TC", serif;
+    color: #222;
+    letter-spacing: 1px;
     font-weight: 600;
     position: relative;
 }
@@ -207,6 +267,8 @@ p{
     color: #a6a6a6;
     position: relative;
     top: -5px;
+    letter-spacing: 1;
+    font-size: 14px;
 }
 .gallery-swiper{
     max-width: 1200px;
@@ -216,7 +278,55 @@ p{
     padding-left: 38px;
 }
 
+.index-newsleft .titleBox .titleMain{
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #3c3c3c;
+    letter-spacing: 1px;
+}
+.index-newsleft .contentTitle{
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-family: "Cardo", "Noto Serif TC", serif;
+    color: #222;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.index-newsleft .contentExp{
+    font-size: 15px;
+}
+.index-newsleft .titleBox .titleEn{
+    font-size: 50px;
+    color: #3a3a3a;
+    line-height: 1;
+}
+.index-newsleft .titleBox .titleEmbellish{
+    font-size: 50px;
+    display: block;
+    line-height: 1;
+    color: #E5C45D;
+}
+@media(max-width:820px) {
+    .index-newsleft{
+        padding: 0px 0px 39px 20px;
+    }
+
+}
+
 @media(max-width:745px) {
+    .index-newsleft{
+        display: none;
+    }
+    .news-swiper .swiper-wrapper .swiper-textbox a{
+        display: block;
+    }
+    .news-swiper h1{
+        display: block;
+    }
     .news-swiper .f-born,.gallery-swiper .f-born{
         font-size: 24px;
         top: 0;
@@ -1277,10 +1387,6 @@ footer .line{
 
     .part3 ul{
         display: none;
-    }
-
-    .index-sw{
-        margin-bottom: 25px;
     }
 }
 
@@ -2793,93 +2899,39 @@ footer .line{
 }
 
 /*----------------SO Biotic----------------*/
-.SOBiotic.banner{
+.SOBiotic_img.banner{
     width: 100%;
-    height: 573.7px;
+    height: 520px;
     position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-    background-image: url('../img/pd/so_biotic/源益banner背景圖.jpg');
+    background-image: url('../img/pd/so_biotic/pc/源益banner\ bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+
+} 
+.SOBiotic_img.banner img{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40px;
+    width: 800px;
 }
+.biotic-info-pc-content{
+    max-width: 1200px;
+    margin: auto;
+}
+
 .SOBiotic .f-born,.Collagen-ct .f-born,.Collagen-ct .pd-title .f-born{
     color: #939393;
     font-weight: 600;
 }
 
-.SOBiotic.banner .banner-text{
-    color: #242424;
-    width: 50%;
-    padding: 30px 45px;
-    position: absolute;
-    left: 90px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.SOBiotic.banner .banner-text h2{
-    font-size: 40px;
-    font-weight: 800;
-    color: #7cbda3;
-    line-height: 1.2;
-}
-.pdBox{
-    position: absolute;
-    right: 5%;
-    top: 150px;
-    width: 100%;
-}
 
-.SOBiotic.banner .pdBox{
-    max-width: 32%;
-}
-.biotic-info-pc{
-    max-width: 1200px;
-    margin: auto;
-}
 .biotic-info-ph{
     display: none;
 }
 @media(max-width:745px) {
-    .SOBiotic.banner{
-        background-image: url(../img/pd/so_biotic/源益banner背景ph-05.jpg);
-    }
-    .SOBiotic.banner{
-        flex-direction: column;
-        margin-bottom: 36px;
-        height: 380px;
-    }
-    .SOBiotic.banner .banner-text h1 .f-born{
-        margin-top: 0px;
-        position: relative;
-        top: -12px;
-        font-size: 20px;
-    }
-    
-    .SOBiotic.banner .banner-text{
-        color: #fff;
-        width: 100%;
-        padding: 30px 45px;
-        position: relative;
-        left: 0;
-        top: 0;
-        transform: translateY(0);
-        text-align: center;
-    }   
-    .SOBiotic.banner .banner-text h2{
-        display: none;
-    }
-    
-    .SOBiotic.banner .pdBox{
-        max-width: 60%;
-    }
-    .SOBiotic .pdBox{
-        bottom: -69px;
-        right: 50%;
-        transform: translateX(55%);
-    }
     .biotic-info-pc{
         display: none;
     }
