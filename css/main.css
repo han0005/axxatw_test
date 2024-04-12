@@ -3,6 +3,10 @@
    License: none (public domain)
 */
 
+html{
+    height: 100%;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -77,7 +81,7 @@ img{
     width: 33.33%;
 }
 
-.event-page-content img,.biotic-info-pc img,.biotic-info-ph img,.collagen-info-ph img{
+.event-page-content img,.biotic-info-pc img,.biotic-info-ph img,.collagen-info-ph img,.img-info-pc img{
     vertical-align: bottom;
 }
 
@@ -111,7 +115,9 @@ body{
     color: #E5C45D;
 }
 /*------------------------以上為字體-------------------------*/
-
+.animate__animated.animate__fadeIn{
+    --animate-duration: 1.2s;
+}
 
 h1{
     font-size: 46px;
@@ -2640,14 +2646,12 @@ footer .line{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-
+    text-align: center;
 } 
 .SOCollagen_img.banner img{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 40px;
-    width: 800px;
+    position: relative;
+    top: 36px;
+    min-height: 435px;
 }
 
 
@@ -2873,6 +2877,12 @@ footer .line{
     .Collagen-ct .part2 .part2-text h1,.Collagen-ct .part3 h1{
         font-size: 26px;
     }
+    .SOCollagen_img.banner{
+        background-image: url(../img/pd/so_collagen/源優banner\ ph-bg.jpg);
+    }
+    .SOCollagen_img.banner img{
+        width: 88%;
+    }
 }
 
 @media(max-width:426px) {
@@ -2916,16 +2926,20 @@ footer .line{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-
+    text-align: center;
 } 
 .SOBiotic_img.banner img{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 40px;
-    width: 800px;
+    position: relative;
+    top: 36px;
+    min-height: 435px;
 }
+
 .biotic-info-pc-content{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.soplus-info-pc{
     max-width: 1200px;
     margin: auto;
 }
@@ -2940,12 +2954,18 @@ footer .line{
     display: none;
 }
 @media(max-width:745px) {
-    .biotic-info-pc{
+    .biotic-info-pc,.soplus-info-pc{
         display: none;
     }
     .biotic-info-ph{
         display: block;
         text-align: center;
+    }
+    .SOBiotic_img.banner{
+        background-image: url(../img/pd/so_biotic/ph/源益ph-bg.jpg);
+    }
+    .SOBiotic_img.banner img{
+        width: 97%;
     }
 }
 
