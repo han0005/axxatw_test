@@ -13,7 +13,7 @@
     <script src="../jquery-3.7.1.min.js"></script>
     <script src="../js/fontawesome.js"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v19.0" nonce="FLbBXFky"></script>
-
+    <script src="../js/clipboard.min.js"></script>
 </head>
 
 <body>
@@ -52,6 +52,7 @@
                 <div class="event-t tag-blue">捐書</div>
                 <div class="event-t tag-orange">好書相傳</div>
             </div>
+
             <div class="event-page-box">
                 <h3><i class="far fa-clock"></i>2024.04.19 12:00截止</h3>
                 <p>好書相傳 散播知識種籽<br>
@@ -74,10 +75,30 @@
                     <br>     -參加此活動如未特別告知不得使用，及同意天雨將本活動照片發布於天雨FB、官網做宣傳使用，如不同意使用可先告知我們，我們將不會使用您的照片做宣傳
                     <br><br><a href="https://www.facebook.com/share/p/VeFFBmckYQvAbEBM/?mibextid=WC7FNe">前往FB活動貼文</a>
                 </p>
+                </div>
             </div>
+            
             <div class="event-details">
             </div>
         </div>
+           <div class="share_link">
+                <p>分享出去</p>
+                <div class="fb_share">
+                    <a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=https://axxaglobal.com.tw/event%20page%20Donate_books.html" title="分享文章於 Facebook" target="_blank">
+                        <span class="fb_icon"></span>
+                    </a>
+                </div>
+                <div class="line_share">
+                    <a class="line" href="https://line.me/R/msg/text/?https://axxaglobal.com.tw/event%20page%20Donate_books.html" title="分享至LINE" target="_blank">
+                        <span class="line_icon"></span>
+                    </a>
+                </div>
+                <div class="link_share">
+                    <a class="sharelink_btn" title="複製連結" data-clipboard-text="https://axxaglobal.com.tw/event%20page%20Donate_books.html">
+                        <span class="link_icon"></span>
+                    </a>
+                </div>
+            </div>
         
         <footer>
             <div class="footer-area footer-top">
@@ -127,6 +148,11 @@
             document.getElementById("tab" + tabIndex).classList.add("active");
             tabs[tabIndex - 1].classList.add("active");
         }
+
+ 
+
+        const clipboard = new ClipboardJS('.sharelink_btn');
+
     </script>      
 </body>
 </html>

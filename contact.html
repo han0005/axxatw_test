@@ -7,17 +7,15 @@
     <meta data-n-head="ssr" data-hid="description" name="description" content="天雨是一家總部位於新加坡的公司，在馬來西亞、印尼、香港和台灣均設有營業據點，並持續不斷擴展經營。如您有任何疑問或想了解天雨事業機會或產品，請隨時聯絡我們。我們的專業團隊將竭誠為您提供協助。也歡迎您蒞臨天雨台灣台北辦公室，您的支持對我們而言至關重要。我們期待與您建立穩固的合作關係，共同開拓天雨事業！">
 
     <!--swiper--> 
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">   
-    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">   
+
     <link rel="stylesheet" href="./css/main.css">
-    
-    <!--aos--> 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="jquery-3.7.1.min.js"></script>
     <script src="./js/fontawesome.js"></script>
 
+    <script src="./js/swiper.js"></script>
+    <script src="all.js"></script>
 </head>
 <body>
     <div class="container">
@@ -173,23 +171,23 @@
                 </div>
             </div>
             
-            <div class="contact-part" data-aos="fade-up">
+            <div class="contact-part">
                 <h2>新加坡<span class="f-born">Singapore</span></h2> 
                 <p>7500A.Beach Road, #06-324, The Plaza Singapore</p>
                 
                 <p><i class="fa-solid fa-phone"></i> : +65 6543 1506</p>
             </div>
-            <div class="contact-part" data-aos="fade-up">
+            <div class="contact-part">
                 <h2>香港<span class="f-born">Hong Kong</span></h2> 
                 <p>香港九龍尖沙嘴金巴利街1號B恆港中心14樓1409室</p>
                 <p><i class="fa-solid fa-phone"></i> : +852 6716 1813</p>
             </div>
-            <div class="contact-part" data-aos="fade-up">
+            <div class="contact-part">
                 <h2>馬來西亞<span class="f-born">Malaysia</span></h2> 
                 <p>D4(2nd),Fahrenheit 88,179 Jalan Bukit Bintang,55100 Kuala Lumpur</p>
                 <p><i class="fa-solid fa-phone"></i> : +603 4813 8038</p>
             </div>
-            <div class="contact-part" data-aos="fade-up">
+            <div class="contact-part">
                 <h2>印尼<span class="f-born">Indonisia</span></h2> 
                 <p>26th Floor,Suite SC-2609, JI.Let.Jend.S.Parman Kav.28 Tanjung Duren Selatan, Grogol Petamburan, Jakarta Barat 11470, Indonesia</p>
                 <p><i class="fa-solid fa-phone"></i> : 6221 2918 1321</p>
@@ -263,13 +261,10 @@
         </footer>
         <div class="gotop"><a href="#"><i class="fa-solid fa-chevron-up"></i></a></div>
     
-        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
-        <script src="all.js"></script>
+
         <script>        
             var mySwiper = new Swiper ('.swiper', {
             direction: 'horizontal', // 垂直切换选项
-            loop: true, // 循环模式选项
-            tag: Swiper,
             
             // 如果需要分页器
             pagination: {
@@ -284,6 +279,7 @@
     
             controller: {
             inverse: true,
+            observerParents: true,
             },
         })        
       </script>

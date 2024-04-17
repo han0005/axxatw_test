@@ -10,11 +10,10 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!--swiper--> 
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">   
     <!--aos-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="./js/aos-master/dist/aos.css" rel="stylesheet">
+    <script src="./js/aos-master/dist/aos.js"></script>
     <script src="jquery-3.7.1.min.js"></script>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v19.0" nonce="FLbBXFky"></script>
 </head>
@@ -170,7 +169,7 @@
                 <div class="oil">
                     <img src="./img/index/網頁首頁-02.png" alt="背景圖案">
                 </div>
-                <div class="part3-img" id="part3-img" data-aos="fade-right">
+                <div class="part3-img" id="part3-img" data-aos="fade-left">
                     <img src="./img/index/網頁首頁-03.png" alt="找到工作與自由間的平衡">
                 </div>
                 <div class="part part3_text">
@@ -206,11 +205,9 @@
                     ></div>
         
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" data-aos="zoom-in">
+                        <div class="swiper-slide" data-aos="fade-up">
                             <div class="news-img">
-                               <a href="">
-                                 <img src="./axxaevent/img/event/淨灘活動-05.jpg" alt="天雨公益淨灘活動" srcset="">
-                                </a> 
+                                <img src="./axxaevent/img/event/淨灘活動-05.jpg" alt="天雨公益淨灘活動" srcset="">
                             </div>
                             <div class="swiper-textbox">
                                 <!-- Each slide has parallax title -->
@@ -227,11 +224,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100" data-aos-duration="100" data-aos-easing="ease-in-sine">
                             <div class="news-img">
-                                <a href="">
-                                    <img src="./img/event/event page/捐書活動 贈 圖文訊息.jpg" alt="捐書做公益!領取6包天雨產品" srcset="">
-                                </a>
+                                <img src="./img/event/event page/捐書活動 贈 圖文訊息.jpg" alt="捐書做公益!領取6包天雨產品" srcset="">
                             </div>
                             <div class="swiper-textbox">
                                 <!-- Each slide has parallax title -->
@@ -249,11 +244,9 @@
                             </div>
                           </div>
                         
-                        <div class="swiper-slide" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200" data-aos-duration="200" data-aos-easing="ease-in-sine">
                             <div class="news-img">
-                                <a href="">
-                                    <img src="./img/event/抽獎EDM-04.jpg" alt="週年慶抽獎 Ipad、天雨產品等多項大獎等你帶回家" srcset="">
-                                </a>
+                                <img src="./img/event/抽獎EDM-04.jpg" alt="週年慶抽獎 Ipad、天雨產品等多項大獎等你帶回家" srcset="">
                             </div>
                             <div class="swiper-textbox">
                                 <!-- Each slide has parallax title -->
@@ -367,8 +360,9 @@
 
     
     <div class="gotop"><a href="#"><i class="fa-solid fa-chevron-up"></i></a></div>
+    <script src="./js/fontawesome.js"></script>
     <script src="all.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+    <script src="./js/swiper.js"> </script>
     <script>        
         var galleryswiper = new Swiper ('.gallery-swiper', {
             direction: 'horizontal', // 垂直切换选项
@@ -394,11 +388,9 @@
             scrollbar: {
             el: '.gallery-swiper .swiper-scrollbar',
             },
-             })     
-  </script>
-
-  <script>
-        var newsswiper = new Swiper(".news-swiper", {
+             })  
+             
+             var newsswiper = new Swiper(".news-swiper", {
             slidesPerView: 1,
             spaceBetween: 24,
             breakpoints: {

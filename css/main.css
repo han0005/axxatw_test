@@ -353,7 +353,57 @@ p{
         font-size: 22px;
     }
 }
+/*--------------------Share part-------------------------*/
+.share_link{
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    text-align: start;
+}
+.share_link p{
+    display: inline-block;
+    line-height: 2;
+}
+.share_link .fb_share, .share_link .line_share,.share_link .link_share{
+    border-radius: 3px;
+    margin: auto;
+    vertical-align: bottom;
+    display: inline-block;
+    color: #fff;
+}
+.share_link .fb_share{
+    background-color: #45619d;
+    position: relative;
+    height: 32px;
+}
+.share_link .line_share{
+    background-color: #1dc320;
+    position: relative;
+    height: 32px;
+}
+.share_link .link_share{
+    background-color: #8d8d8d;
+    position: relative;
+    height: 32px;
+    cursor: pointer;
+}
 
+
+.share_link .fb_icon ,.share_link .line_icon ,.share_link .link_icon{
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.share_link .fb_icon{
+    background: url(../img/icon/fb\ share.png) center center/20px 32px no-repeat;
+}
+.share_link .line_icon{
+    background: url(../img/icon/line\ share.png) center center/20px 20px no-repeat;
+}
+.share_link .link_icon{
+    background: url(../img/icon/link\ share.png) center center/23px 23px no-repeat;
+}
 /*--------------------以下為aside------------------------*/
 .ph-menu-btn{
     display: none;
@@ -1075,7 +1125,7 @@ p{
         flex-direction: column-reverse;
     }
     .index-wrap .part3{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .index-wrap .part3 .part3-img{
         width: 60%;
@@ -1098,7 +1148,7 @@ p{
         padding: 20px;
     }
     .part3 .oil img{
-        top: 20px;
+        top: 434px;
     }
     .index-wrap.container-fluid .part3 .part3-img{
         width: 95%;

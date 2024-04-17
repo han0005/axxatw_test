@@ -1,157 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabbed Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .tabs-wrap{
-            display: flex;
-        }
-        .tabs {
-            display: flex;
-            list-style: none;
-            flex-direction: column;
-            padding: 0;
-            width: 30%;
-        }
-.tabs-content{
-    width: 70%;
-}
-        .tab {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-            background-color: #eee;
-            cursor: pointer;
-  
-        }
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 
-        .tab.active {
-            background-color: #007bff;
-            color: #fff;
-        }
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
 
-        .tab-content {
-            display: none;
-            padding: 20px;
-        }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
 
-        .tab-content.active {
-            display: block;
-        }
+    swiper-container {
+      width: 100%;
+      height: 100%;
+    }
 
-        .banner-container {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            height: 300px; /* 更改此值以調整橫幅的高度 */
-            cursor: grab;
-        }
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #e70000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .banner-slider {
-            display: flex;
-            transition: transform 0.5s ease;
-            cursor: inherit;
-        }
-
-        .banner-slide {
-            flex: 0 0 100%; /* 使每個橫幅幻燈片佔滿父容器 */
-            max-width: 100%;
-        }
-
-        .banner-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="banner-container" onmousedown="startDrag(event)" onmouseup="endDrag()">
-        <div class="banner-slider" onmousemove="drag(event)">
-            <div class="banner-slide">
-                <img src="./img/axxa+group.jpg" alt="Banner Image 1">
-            </div>
-            <div class="banner-slide">
-                <img src="./img/business/banner-03.jpg" alt="Banner Image 2">
-            </div>
-            <div class="banner-slide">
-                <img src="image3.jpg" alt="Banner Image 3">
-            </div>
-            <!-- Add more slides as needed -->
-        </div>
-    </div>
+  <swiper-container class="mySwiper" navigation="true">
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide>
+    <swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide>
+    <swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide>
+    <swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide>
+    <swiper-slide>Slide 9</swiper-slide>
+  </swiper-container>
 
-    <div class="tabs-wrap">
-        <ul class="tabs">
-            <li class="tab active" onclick="changeTab(1)">分頁1</li>
-            <li class="tab" onclick="changeTab(2)">分頁2</li>
-            <li class="tab" onclick="changeTab(3)">分頁3</li>
-        </ul>
-        <div class="tabs-content">
-            <div id="tab1" class="tab-content active">
-                <h2>這是分頁1的內容</h2>
-                <p>這裡是分頁1的內容。您可以在這裡添加任何您想要顯示的內容。</p>
-            </div>
-            <div id="tab2" class="tab-content">
-                <h2>這是分頁2的內容</h2>
-                <p>這裡是分頁2的內容。您可以在這裡添加任何您想要顯示的內容。</p>
-            </div>
-            <div id="tab3" class="tab-content">
-                <h2>這是分頁3的內容</h2>
-                <p>這裡是分頁3的內容。您可以在這裡添加任何您想要顯示的內容。</p>
-            </div>
-        </div>
-    </div>
-    
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
-    <script>
-        function changeTab(tabIndex) {
-            // Hide all tab contents and remove active class from tabs
-            var tabContents = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.remove("active");
-            }
-
-            var tabs = document.getElementsByClassName("tab");
-            for (var i = 0; i < tabs.length; i++) {
-                tabs[i].classList.remove("active");
-            }
-
-            // Show the selected tab content and add active class to the selected tab
-            document.getElementById("tab" + tabIndex).classList.add("active");
-            tabs[tabIndex - 1].classList.add("active");
-        }
-    </script>
-     <script>
-        let isDragging = false;
-        let startX, dragOffset;
-
-        function startDrag(event) {
-            isDragging = true;
-            startX = event.clientX;
-            dragOffset = 0;
-        }
-
-        function endDrag() {
-            isDragging = false;
-        }
-
-        function drag(event) {
-            if (!isDragging) return;
-
-            const slider = document.querySelector('.banner-slider');
-            const moveX = event.clientX - startX;
-            slider.style.transform = `translateX(${dragOffset + moveX}px)`;
-
-            event.preventDefault();
-        }
-    </script>
 </body>
+
 </html>
